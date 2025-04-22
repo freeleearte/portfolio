@@ -315,14 +315,14 @@ $('header ul.nav li').click(function () {
         $('body').removeClass();
         moveBg(0);
     }
-    if ($('header ul.nav li.web.on').length) {
-        handleFilter($('.p_con.web'));
-        $('body').removeClass().addClass('web');
+    if ($('header ul.nav li.live.on').length) {
+        handleFilter($('.p_con.live'));
+        $('body').removeClass().addClass('live');
         moveBg(-100);
     }
-    if ($('header ul.nav li.app.on').length) {
-        handleFilter($('.p_con.app'));
-        $('body').removeClass().addClass('app');
+    if ($('header ul.nav li.mock.on').length) {
+        handleFilter($('.p_con.mock'));
+        $('body').removeClass().addClass('mock');
         moveBg(-200);
     }
     if ($('header ul.nav li.art.on').length) {

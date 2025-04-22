@@ -4,11 +4,11 @@ body {
     background: #fff;
 }
 
-/* body.web {
+/* body.live {
     background: #f3d8ff;
 }
 
-body.app {
+body.mock {
     background: #dfffa3;
 }
 
@@ -46,11 +46,11 @@ body.art {
     background: url(../asset/box.png) center/contain no-repeat;
 }
 
-#box_bg .web {
+#box_bg .live {
     background: url(../asset/box.png) center/contain no-repeat;
 }
 
-#box_bg .app {
+#box_bg .mock {
     background: url(../asset/box.png) center/contain no-repeat;
 }
 
@@ -111,12 +111,12 @@ header ul.nav li.on p {
     box-shadow: -3px -4px 7px 0px rgba(255, 255, 255, 0.15) inset, 8px 16px 16px 0px rgba(20, 64, 11, 0.10);
 }
 
-header ul.nav li.web.on p {
+header ul.nav li.live.on p {
     background: radial-gradient(107.08% 85.59% at 86.3% 87.5%, rgba(0, 0, 0, 0.23) 0%, rgba(0, 0, 0, 0.00) 86.18%), radial-gradient(83.94% 83.94% at 26.39% 20.83%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0.00) 76.6%, rgba(255, 255, 255, 0.00) 100%), #9e66b6;
     box-shadow: -3px -4px 7px 0px rgba(255, 255, 255, 0.15) inset, 8px 16px 16px 0px rgba(20, 64, 11, 0.10);
 }
 
-header ul.nav li.app.on p {
+header ul.nav li.mock.on p {
     background: radial-gradient(107.08% 85.59% at 86.3% 87.5%, rgba(0, 0, 0, 0.23) 0%, rgba(0, 0, 0, 0.00) 86.18%), radial-gradient(83.94% 83.94% at 26.39% 20.83%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0.00) 76.6%, rgba(255, 255, 255, 0.00) 100%), #8ac223;
     box-shadow: -3px -4px 7px 0px rgba(255, 255, 255, 0.15) inset, 8px 16px 16px 0px rgba(20, 64, 11, 0.10);
 }
@@ -135,11 +135,11 @@ header ul.nav li .progress_bar {
     display: none;
 }
 
-header ul.nav li.web .progress_bar {
+header ul.nav li.live .progress_bar {
     background: #9d43c4;
 }
 
-header ul.nav li.app .progress_bar {
+header ul.nav li.mock .progress_bar {
     background: #82b81f;
 }
 
