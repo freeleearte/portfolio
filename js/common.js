@@ -16,6 +16,14 @@ $(function () {
         continuous: true
     });
 
+    $('.txtAni4').simplyScroll({
+        speed: 2,
+        pauseOnHover: false,
+        pauseOnTouch: false,
+        direction: 'forwards',
+        continuous: true
+    });
+
     $('.tab').on('click', function () {
         $('.tab_menu_wrap').fadeIn()
         $('.tab_menu').animate({
