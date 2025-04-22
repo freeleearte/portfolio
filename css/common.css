@@ -1,0 +1,255 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Abhaya+Libre:wght@400;500;600;700;800&family=Arimo:ital,wght@0,400..700;1,400..700&family=Bungee&family=Modak&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css');
+@import url('https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard.css');
+
+:root {
+    --start-font: "Montserrat", sans-serif;
+    --start-title-font: "Modak", system-ui;
+    --bungee: "Bungee", sans-serif;
+    --arimo: "Arimo", sans-serif;
+    --adlam: "ADLaM Display", system-ui;
+    --abhaya: "Abhaya Libre", serif;
+    --suit: "SUIT", sans-serif;
+    --pretendard: "Pretendard", sans-serif;
+}
+
+.inner {
+    width: 1500px;
+    margin-inline: auto;
+}
+
+.custom_cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+
+.tab_menu_wrap {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background: #58175C40;
+    color: #fff;
+    display: none;
+}
+
+.tab_menu {
+    position: absolute;
+    left: -100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.tab_menu_wrap img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-select: none;
+}
+
+.tab_menu .front {
+    width: 800px;
+    height: 800px;
+    background: #8B1894;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: relative;
+}
+
+.tab_menu .front i {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.tab_menu .front ul {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    margin-bottom: 125px;
+    gap: 50px;
+}
+
+.tab_menu .front ul li {
+    font-family: var(--bungee);
+    font-size: 50px;
+}
+
+.tab_menu .front ul li span {
+    cursor: pointer;
+}
+
+.right {
+    position: absolute;
+    top: 350px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.right.r_main {
+    position: absolute;
+    top: 350px;
+    right: 110px;
+    display: flex;
+    align-items: center;
+}
+
+.right .info {
+    position: absolute;
+    right: 280px;
+}
+
+.right .info .txt {
+    width: 300px;
+    height: 300px;
+    background: #8B1894;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-family: var(--bungee);
+    font-size: 34px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.right>img {
+    position: relative;
+    /* width: 80%; */
+}
+
+.txtAniBox .simply-scroll .simply-scroll-clip {
+    display: flex;
+    overflow: hidden;
+}
+
+.txtAniBox .simply-scroll .simply-scroll-clip .simply-scroll-list {
+    display: flex;
+}
+
+.txtAniBox ul {
+    display: flex;
+    height: auto;
+    align-items: center;
+    white-space: nowrap;
+    transform-origin: left top;
+    cursor: pointer;
+}
+
+.txtAniBox ul li {
+    margin-right: 15px;
+}
+
+.f_left,
+.f_right {
+    width: 70px;
+    height: 100vh;
+    position: fixed;
+    display: none;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.f_left .txtAniBox,
+.f_right .txtAniBox {
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.f_left.out {
+    left: 0;
+    top: 0;
+}
+
+.f_left.in {
+    left: 70px;
+    top: 0;
+}
+
+.f_right.out {
+    right: 0;
+    top: 0;
+}
+
+.f_right.in {
+    right: 70px;
+    top: 0;
+}
+
+.f_left .simply-scroll {
+    rotate: -90deg;
+}
+
+.f_left .txtAniBox .simply-scroll .simply-scroll-clip,
+.f_right .txtAniBox .simply-scroll .simply-scroll-clip {
+    height: 70px;
+    width: 100vh;
+}
+
+.f_right .simply-scroll {
+    width: 100vh;
+    rotate: 90deg;
+}
+
+.out .txtAniBox.f_on {
+    display: flex;
+}
+
+.in .txtAniBox.f_on {
+    display: flex;
+}
+
+.f_projects {
+    color: #44f620;
+}
+
+.f_profile {
+    color: #F5A623;
+}
+
+.f_contact {
+    color: #1C3D6C;
+}
+
+.show-content {
+    display: block;
+    opacity: 1;
+}
+
+.inner h2 {
+    font-family: var(--bungee);
+    font-size: 100px;
+    margin-top: 20px;
+}
+
+.inner i.tab {
+    font-size: 85px;
+    cursor: pointer;
+}

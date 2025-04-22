@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>SK 이노베이션</title>
+    <!-- Locomotive Scroll -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spoqa-han-sans@2.1.2/css/SpoqaHanSansNeo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-simplyscroll/2.1.1/jquery.simplyscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/common.js" defer></script>
+</head>
+
+<body>
+    <div class="wrap" data-scroll-container>
+        <header id="header">
+            <h1><a href="#"><img src="img/logo-skinnovation.png" alt="SK 이노베이션"></a></h1>
+            <nav class="">
+                <div class="nav_bg"></div>
+                <ul class="gnb">
+                    <li><a href="#">Company</a>
+                        <ul>
+                            <li><a href="#">회사 소개</a></li>
+                            <li><a href="#">브랜드</a></li>
+                            <li><a href="#">글로벌 네트워크</a></li>
+                            <li><a href="#">미디어센터</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Sustainability</a>
+                        <ul>
+                            <li><a href="#">Green Innovation</a></li>
+                            <li><a href="#">Road to Net Zero</a></li>
+                            <li><a href="#">Outstanding SHE Mgmt.</a></li>
+                            <li><a href="#">Winning the Trust</a></li>
+                            <li><a href="#">Together with Society</a></li>
+                            <li><a href="#">Happiness for All</a></li>
+                            <li><a href="#">리포팅 센터</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">IR</a>
+                        <ul>
+                            <li><a href="#">Governance</a></li>
+                            <li><a href="#">재무정보</a></li>
+                            <li><a href="#">주식정보</a></li>
+                            <li><a href="#">IR정보</a></li>
+                            <li><a href="#">공시정보</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Career</a>
+                        <ul>
+                            <li><a href="#">조직문화</a></li>
+                            <li><a href="#">인사제도</a></li>
+                            <li><a href="#">채용정보</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="r_menu">
+                <div class="sel">
+                    <p><strong>KOR</strong><span class="material-symbols-outlined">
+                            keyboard_arrow_down
+                        </span></p>
+                    <ul>
+                        <li><a href="#"><strong>ENG</strong></a></li>
+                        <li><a href="#"><strong>JPN</strong></a></li>
+                    </ul>
+                </div> <!-- //.sel -->
+            </div> <!-- //.r_menu -->
+        </header>
+        <main>
+            <div class="custom_cursor"></div>
+            <section class="main_visual">
+                <div class="main_slide_wrap swiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide main1"><a href="#">
+                                <div class="tit">
+                                    <h2>Drive the World<br><span>with Innovation</span></h2>
+                                    <p>Read more<span class="material-symbols-outlined">
+                                            trending_flat
+                                        </span></p>
+                                </div>
+                            </a></li>
+                        <li class="swiper-slide main2"><a href="#">
+                                <div class="tit">
+                                    <h2>Create Happy Future<br><span>with Global Friends</span></h2>
+                                    <p>Read more<span class="material-symbols-outlined">
+                                            trending_flat
+                                        </span></p>
+                                </div>
+                            </a></li>
+                        <li class="swiper-slide main3"><a href="#">
+                                <div class="tit">
+                                    <h2>Grow Together<br><span>with Society</span></h2>
+                                    <p>Read more<span class="material-symbols-outlined">
+                                            trending_flat
+                                        </span></p>
+                                </div>
+                            </a></li>
+                    </ul>
+                </div> <!-- //.main_slide_wrap -->
+
+                <!-- 커스텀 페이지네이션 -->
+                <div class="vertical-pagination">
+                    <!-- 현재 슬라이드 번호 -->
+                    <div class="num">
+                        <span class="swiper-pagination-current">01</span> / 03
+                    </div>
+
+                    <!-- 중앙 세로라인(진행도 표시) -->
+                    <div class="swiper-pagination-line">
+                        <!-- 실제로 채워질 부분 -->
+                        <div class="swiper-pagination-line-fill"></div>
+                    </div>
+
+                    <!-- 위/아래 화살표(버튼) -->
+                    <div class="swiper-pagination-buttons">
+                        <span class="prev">▲</span>
+                        <span class="next">▼</span>
+                    </div>
+                </div> <!-- //.vertical-pagination-->
+            </section> <!-- //.main_visual -->
+
+            <section class="txt_area">
+                <h2>
+                    <strong class="tit">지속 가능성을 향한 <span>기술</span>과 <span>혁신</span></strong>
+                    <strong class="tit"><span>SK이노베이션</span>,</strong>
+                    <b class="tit"><span>글로벌 미래</span>를 설계하다</b>
+                    <em class="tit"><span>에너지 그 너머의 가치</span></em>
+                </h2>
+            </section> <!-- //.txt_area -->
+
+            <section class="vision">
+                <div class="sticky">
+                    <div class="sticky_title">
+                        <div class="bg">vision</div>
+                        <ul class='list'>
+                            <li>
+                                창의성과 실행력으로, 에너지 그 너머의 경험을 만듭니다.
+                            </li>
+                            <li>
+                                디테일에 집중하고, 지속 가능한 혁신을 실현합니다.
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="s_tit">
+                        <h2 class="">Our Value & Vision</h2>
+                        <p>
+                            지속 가능한 경영을 위한 ESG 비전으로<br>
+                            새로운 가치를 창출해 나갑니다.
+                        </p>
+
+                    </div>
+                    <div class="sticky_con">
+                        <ul class="card_frame">
+                            <li class="card">
+                                <div class="front"></div>
+                                <div class="back">
+                                    <div class="icon"></div>
+                                    <h3>ENVIRONMENT</h3>
+                                    <p> 지속가능한 성장을 위한<br>
+                                        비즈니스 포트폴리오 밸류업을 추진합니다.</p>
+                                </div>
+                            </li>
+                            <li class="card">
+                                <div class="front"></div>
+                                <div class="back">
+                                    <div class="icon"></div>
+                                    <h3>SOCIAL</h3>
+                                    <p>다양한 이해관계자의 행복을 확대하고,<br>
+                                        ESG 문화를 사회 전반으로 확산합니다.</p>
+                                </div>
+                            </li>
+                            <li class="card">
+                                <div class="front"></div>
+                                <div class="back">
+                                    <div class="icon"></div>
+                                    <h3>GOVERNANCE</h3>
+                                    <p> 투명한 이사회 중심의 경영으로<br>
+                                        신뢰받는 거버넌스를 실현합니다.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section> <!-- //.vision -->
+
+            <section class="special_product">
+                <div class="s_tit">
+                    <h2 class="">SK Innovation Subsidiary</h2>
+                    <p>SK이노베이션은 에너지·화학 분야의 자회사들을 <br>
+                        통해 지속 가능한 미래를 만들어갑니다.
+                    </p>
+                </div><!-- //.s_tit -->
+                <ul>
+                    <li data-scroll data-scroll-speed="1"><a href="#">
+                            <div class="name">
+                                <strong>SK 에너지</strong>
+                                <p>에너지를 통해 고객과<br>사회의 행복에<br>기여하는 미래형 에너지 기업</p>
+                            </div>
+                            <div class="img_box"><img src="img/s4-icon-1.png" alt=""></div>
+                        </a></li>
+                    <li data-scroll data-scroll-speed="3"><a href="#">
+                            <div class="name">
+                                <strong>SK 지오센트릭</strong>
+                                <p>고부가 화학소재, 차세대 재활용<br>기술 기반으로 세상에<br>필요한 솔루션을 제공하는 기업</p>
+                            </div>
+                            <div class="img_box"><img src="img/s4-icon-2.png" alt=""></div>
+                        </a></li>
+                    <li data-scroll data-scroll-speed="1"><a href="#">
+                            <div class="name">
+                                <strong>SK 온</strong>
+                                <p>배터리 기술 혁신으로 더 나은<br>미래를 열어 나가는 기업</p>
+                            </div>
+                            <div class="img_box"><img src="img/s4-icon-3.png" alt=""></div>
+                        </a></li>
+                    <li data-scroll data-scroll-speed="3"><a href="#">
+                            <div class="name">
+                                <strong>SK 엔무브</strong>
+                                <p>제품 기술 경쟁력과 액침냉각,<br>배터리 열관리 등 신규 사업으로<br>연료/전력 효율성을 높이는 Energy<br> Saving Company</p>
+                            </div>
+                            <div class="img_box"><img src="img/s4-icon-4.png" alt=""></div>
+                        </a></li>
+                    <li data-scroll data-scroll-speed="-2"><a href="#">
+                            <div class="name">
+                                <strong>SK 인천석유화학</strong>
+                                <p>보다 안전하고<br>깨끗한 에너지로<br>지역사회와 상생하는 기업</p>
+                            </div>
+                            <div class="img_box"><img src="img/s4-icon-5.png" alt=""></div>
+                        </a></li>
+                    <li data-scroll data-scroll-speed="-1"><a href="#">
+                            <div class="name">
+                                <strong>SK 아이이테크놀로지</strong>
+                                <p>글로벌 탑티어<br>소재 솔루션 기업</p>
+                            </div>
+                            <div class="img_box"><img src="img/s4-icon-7.png" alt=""></div>
+                        </a></li>
+                    <li data-scroll data-scroll-speed="-2"><a href="#">
+                            <div class="name">
+                                <strong>SK 어스온</strong>
+                                <p>자원의 선순환까지 생각하는<br>Carbon Neutral Company</p>
+                            </div>
+                            <div class="img_box"><img src="img/s4-icon-8.png" alt=""></div>
+                        </a></li>
+                </ul>
+            </section> <!-- //.special_product -->
+
+            <section class="business">
+                <div class="s_tit">
+                    <h2>Sustainability</h2>
+                    <p>SK이노베이션은 지속가능한 가치를 위해<br>
+                        다양한 영역에서 혁신과 실천을 이어갑니다.</p>
+                    </p>
+                    <div class="btn">
+                        <span class="material-symbols-outlined prev">
+                            west
+                        </span>
+                        <span class="material-symbols-outlined next">
+                            east
+                        </span>
+                    </div>
+                </div><!-- //.s_tit -->
+
+                <div class="slide swiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <a href="#">
+                                <div class="img_box"><img src="img/g.jpg" alt=""></div>
+                                <div class="txt_box">
+                                    <b>G</b>
+                                    <span>저탄소 Portfoilo/BM 확장</span>
+                                    <h3>Green Innovation</h3>
+                                    <p>친환경 기술을 통해 에너지 전환을 선도합니다.</p>
+                                    <div class="tag">
+                                        <ul>
+                                            <li>#GreenInnovation</li>
+                                            <li>#지속가능기술</li>
+                                            <li>#에너지전환</li>
+                                            <li>#친환경기술</li>
+                                            <li>#탄소저감</li>
+                                            <li>#클린테크</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#">
+                                <div class="img_box"><img src="img/r.jpg" alt=""></div>
+                                <div class="txt_box">
+                                    <b>R</b>
+                                    <span>Net Zero 달성</span>
+                                    <h3>Road to Net Zero</h3>
+                                    <p>탄소중립 달성을 위한 구체적인 실행 전략을 추진합니다.</p>
+                                    <div class="tag">
+                                        <ul>
+                                            <li>#NetZero</li>
+                                            <li>#탄소중립</li>
+                                            <li>#ESG경영</li>
+                                            <li>#기후행동</li>
+                                            <li>#2050넷제로</li>
+                                            <li>#에너지혁신</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#">
+                                <div class="img_box"><img src="img/o.jpg" alt=""></div>
+                                <div class="txt_box">
+                                    <b>O</b>
+                                    <span>Global Top Tier 수준의 SHE</span>
+                                    <h3>Outstanding SHE Mgmt.</h3>
+                                    <p>안전·보건·환경 관리를 최우선으로 실천합니다.</p>
+                                    <div class="tag">
+                                        <ul>
+                                            <li>#SHE경영</li>
+                                            <li>#안전한일터</li>
+                                            <li>#환경보건안전</li>
+                                            <li>#ZeroAccident</li>
+                                            <li>#산업안전</li>
+                                            <li>#지속가능경영</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#">
+                                <div class="img_box"><img src="img/w.jpg" alt=""></div>
+                                <div class="txt_box">
+                                    <b>W</b>
+                                    <span>Compliance 관리 강화</span>
+                                    <h3>Winning the Trust</h3>
+                                    <p>투명한 경영으로 고객과 사회의 신뢰를 쌓아갑니다.</p>
+                                    <div class="tag">
+                                        <ul>
+                                            <li>#신뢰경영</li>
+                                            <li>#투명성</li>
+                                            <li>#기업윤리</li>
+                                            <li>#지배구조</li>
+                                            <li>#책임있는경영</li>
+                                            <li>#이해관계자신뢰</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#">
+                                <div class="img_box"><img src="img/t.jpg" alt=""></div>
+                                <div class="txt_box">
+                                    <b>T</b>
+                                    <span>이해관계자와 함께 하는 성장</span>
+                                    <h3>Together with Society</h3>
+                                    <p>이해관계자와의 상생을 통해 지속가능한 가치를 창출합니다.</p>
+                                    <div class="tag">
+                                        <ul>
+                                            <li>#상생협력</li>
+                                            <li>#사회적가치</li>
+                                            <li>#파트너십</li>
+                                            <li>#지역사회</li>
+                                            <li>#협력사동반성장</li>
+                                            <li>#사회공헌</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#">
+                                <div class="img_box"><img src="img/h.jpg" alt=""></div>
+                                <div class="txt_box">
+                                    <b>H</b>
+                                    <span>구성원 행복 중대</span>
+                                    <h3>Happiness for All</h3>
+                                    <p>모두의 행복을 위한 기업의 사회적 책임을 다합니다.</p>
+                                    <div class="tag">
+                                        <ul>
+                                            <li>#모두의행복</li>
+                                            <li>#행복경영</li>
+                                            <li>#사회책임</li>
+                                            <li>#생활의가치</li>
+                                            <li>#나눔과배려</li>
+                                            <li>#포용성장</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section> <!-- //.business -->
+
+            <section class="vid">
+                <div class="s_tit">
+                    <h2 class="">Innovation Through Collaboration</h2>
+                    <p>
+                        다양한 관점이 모일 때, 진짜 혁신이 시작됩니다.<br>
+                        SK이노베이션은 함께 고민하고, 함께 나아갑니다.<br>
+                        전략적 협업과 깊이 있는 논의를 통해<br>
+                        지속 가능한 미래를 설계합니다.<br>
+                        지금, 우리의 회의 속 장면에서<br>
+                        변화의 가능성을 확인해보세요.
+                    </p>
+                </div><!-- //.s_tit -->
+                <figure class="vid_box">
+                    <video src="img/vid1.mp4" loop autoplay muted playsinline></video>
+                </figure>
+            </section> <!-- //.vid -->
+
+            <section class="trust">
+                <div class="s_tit">
+                    <h2>Our Commitment</h2>
+                    <p>
+                        SK이노베이션은 지속 가능한 미래를 위한<br>
+                        책임 있는 혁신을 실천합니다.
+                    </p>
+                </div>
+
+                <div class="con">
+                    <ul>
+                        <li class="sl1"><a href="#">
+                                <h3>Green Innovation</h3>
+                                <p>환경과 미래를 위한 지속 가능한 에너지 혁신을 실천합니다.</p>
+                            </a></li>
+                        <li class="sl2"><a href="#">
+                                <h3>Trust & Responsibility</h3>
+                                <p>투명한 경영과 사회적 책임으로 신뢰받는 기업이 되겠습니다.</p>
+                            </a></li>
+                        <li class="sl3"><a href="#">
+                                <h3>Together with Society</h3>
+                                <p>이해관계자와 함께 성장하며 모두의 행복을 추구합니다.</p>
+                            </a></li>
+                    </ul>
+                </div>
+            </section> <!-- //.trust -->
+
+            <section class="news">
+                <div class="s_tit">
+                    <h2>Latest Updates</h2>
+                    <p>디자인 트렌드와 수강생들의<br>생생한 이야기를 만나보세요.</p>
+                    <a href="#" class="more">View More &gt;</a>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="con swiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><a href="#">
+                                <div class="img_box"><img src="img/1.jpg" alt=""></div>
+                                <p class="txt">
+                                    [The Innostory 사진관] EP1. 과거를 비춰주는 신비로운 사진관
+                                </p>
+                            </a>
+                        </li>
+                        <li class="swiper-slide"><a href="#">
+                                <div class="img_box"><img src="img/2.jpg" alt=""></div>
+                                <p class="txt">
+                                    [전지적 배터리 시점] ③ “네가 왜 여기서 나와~♪♬” 2차전지의 용도와 형태… 그 무한한 확장가능성
+                                </p>
+                            </a>
+                        </li>
+                        <li class="swiper-slide"><a href="#">
+                                <div class="img_box"><img src="img/3.jpg" alt=""></div>
+                                <p class="txt">
+                                    [⚡오픈 더 에너지: 문 너머의 에너지] EP. 2 풍력에너지💨 편｜SK이노베이션 E&amp;S
+                                </p>
+                            </a>
+                        </li>
+                        <li class="swiper-slide"><a href="#">
+                                <div class="img_box"><img src="img/4.jpg" alt=""></div>
+                                <p class="txt">
+                                    🚂칙칙폭폭- 이번에 정차할 역은 ‘상생복지관'입니다!
+                                </p>
+                            </a>
+                        </li>
+                        <li class="swiper-slide"><a href="#">
+                                <div class="img_box"><img src="img/5.jpg" alt=""></div>
+                                <p class="txt">
+                                    [카드뉴스] 국제인증 획득으로 증명한 기술력! SK엔무브의 ‘차세대 냉매’가 궁금하다면?
+                                </p>
+                            </a>
+                        </li>
+                        <li class="swiper-slide"><a href="#">
+                                <div class="img_box"><img src="img/6.jpg" alt=""></div>
+                                <p class="txt">
+                                    [유(油)레카] 주유소 순살 브리핑 – 주유기를 집어 든 순간, 당신의 발 밑에서는…
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section> <!-- //.news -->
+        </main>
+        <footer>
+            <h3>Contact Us</h3>
+            <p>기술과 혁신으로 지속가능한 미래를 만들어가는<br>
+                에너지·화학 전문 기업 <span>SK이노베이션</span>입니다.</p>
+        </footer>
+    </div> <!-- //.wrap -->
+</body>
+
+</html>

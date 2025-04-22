@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+body {
+    background: #fff;
+}
+
+.total_wrap {
+    overflow: hidden;
+}
+
+.inner h2 {
+    color: #1C3D6C;
+}
+
+.inner i.tab {
+    color: #1C3D6C;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 15vh;
+}
+
+ul.c_menu {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+ul.c_menu li {
+    width: 100%;
+    flex: 1;
+    perspective: 700px;
+}
+
+ul.c_menu li .item_wrap {
+    width: 100%;
+    height: 100%;
+    background: #1C3D6C;
+    border-radius: 20px 20px 0 0;
+    padding: 30px;
+    box-sizing: border-box;
+    transform: rotateX(-10deg) translateZ(-5px);
+    transform-origin: bottom bottom;
+    transform-style: preserve-3d;
+    transition: color 0.6s, background 0.6s, transform 0.6s ease;
+    box-shadow: 0 -15px 64px rgba(0, 0, 0, 0.25);
+    border-top: 10px solid #8eb2ec;
+    position: relative;
+    font-family: var(--arimo);
+    color: #dbe793;
+}
+
+ul.c_menu li:hover .item_wrap {
+    height: 100%;
+    background: #2a72d8;
+    transform: rotateX(-5deg) translateZ(-5px) translateY(-30px);
+    color: #fff;
+}
+
+ul.c_menu li:hover .instagram {
+    height: 165%;
+    background: #2a72d8;
+    transform: rotateX(-5deg) translateZ(-5px) translateY(-130px);
+    color: #fff;
+}
+
+ul.c_menu li .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+ul.c_menu li .top p {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+ul.c_menu li .top i {
+    font-size: 100px;
+}
+
+ul.c_menu li .info {
+    display: none;
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+}
+
+ul.c_menu li .instagram .info {
+    width: 50%;
+    top: 50px;
+    left: 50%;
+    justify-content: space-between;
+}
+
+ul.c_menu li em {
+    font-size: 45px;
+
+}
+
+ul.c_menu li .info i {
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+ul.c_menu li .linkedIn .info i {
+    font-size: 40px;
+}
+
+ul.c_menu li:hover .info {
+    display: flex;
+}
+
+ul.c_menu li .instagram .info div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+ul.c_menu li .instagram .info img {
+    width: 200px;
+    border-radius: 10px;
+    align-self: center;
+}
+
+ul.c_menu li .instagram .info em {
+    font-size: 20px;
+    text-align: center;
+}
+
+ul.c_menu li .instagram .info em b {
+    display: block;
+    font-size: 30px;
+}
+
+ul.c_menu li .linkedIn a {
+    display: block;
+    background: #8eb2ec;
+    padding: 15px;
+    border-radius: 10px;
+}

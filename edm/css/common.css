@@ -1,0 +1,29 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=IBM+Plex+Sans+KR&family=Kumbh+Sans:wght@100..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main-font-family: "IBM Plex Sans KR", sans-serif;
+    --title-font-family: "Merriweather Sans", sans-serif;
+    --Gowun-Dodum: "Gowun Dodum", sans-serif;
+    --Kumbh-Sans: "Kumbh Sans", sans-serif;
+    --Merriweather: "Merriweather", serif;
+    --main-red-color: #FF5B5B;
+    --main-purple-color: #834C7D;
+    --sub-orange-color: #FF9A5B;
+    --sub-pink-color: #FF5BCE;
+    --sub-blue-color: #5BB5FF;
+    --sub-purple-color: #C35BFF;
+    --b-color: #000;
+    --w-color: #fff;
+    --f0-color: #f0f0f0;
+}
+
+.inner {
+    width: 1360px;
+    margin: 0 auto;
+}
