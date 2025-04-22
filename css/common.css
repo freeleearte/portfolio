@@ -160,6 +160,7 @@
 
 .txtAniBox ul li {
     margin-right: 15px;
+    font-family: var(--start-font);
 }
 
 .f_left,
