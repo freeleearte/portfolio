@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+body {
+    background: #fff;
+}
+
+header {
+    height: 120px;
+    width: 1500px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: fixed;
+}
+
+.first_p {
+    width: 100%;
+    height: 100vh;
+}
+.first_p .title {}
+.first_p .title h3 {}
+.first_p .title p {}
+
+.second_p {}
+.second_p .top {
+    width: 100%;
+    height: 100vh;
+    border-bottom: 1px solid #ccc;
+}
+.second_p .top p {}
+.second_p .bot {
+    width: 100%;
+    height: 100vh;
+    border-bottom: 1px solid #ccc;
+}
+.second_p .bot .hole {}
+
+.last_p {}
+.last_p .last_f {
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    color: #fff;
+}
+.last_p .last_s {
+    width: 100%;
+    height: 100vh;
+    background: #000;
+}
+.last_p .last_t {
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+}
+.last_p .last_t .name {}
+.last_p .last_t .name h4 {}

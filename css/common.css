@@ -137,7 +137,14 @@
 
 .right>img {
     position: relative;
-    /* width: 80%; */
+    width: 80%;
+    margin-left: 18%;
+}
+
+.right.r_main>img {
+    position: relative;
+    width: 100%;
+    margin-left: 0;
 }
 
 .txtAniBox .simply-scroll .simply-scroll-clip {
