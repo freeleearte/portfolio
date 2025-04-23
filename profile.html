@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
@@ -16,7 +18,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-simplyscroll/2.1.1/jquery.simplyscroll.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.min.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/profile.js" defer></script>
 </head>
 
 <body>
@@ -177,36 +183,97 @@
         <header>
             <i class="fa-solid fa-cube tab"></i>
         </header>
-        <div class="first_p">
-            <div class="title">
-                <h3>Not just design,<br>
-                    but experiences<br>
-                    that connect and inspire</h3>
-                <p>저는 단순히 디자인을 넘어서, 사람들과 소통하고 영감을 주는 경험을 만들고자 합니다.</p>
-            </div> <!-- //.title -->
-        </div> <!-- //.first_p -->
-        <div class="second_p">
-            <div class="top">
-                <p>저는 디자인을 통해 의미 있는 경험을 만들고자 하는 디자이너입니다.</p>
-            </div> <!-- //.top -->
-            <div class="bot">
-                <div class="hole"></div>
-            </div> <!-- //.bot -->
-        </div> <!-- //.second_p -->
-        <div class="last_p">
-            <div class="last_f">
-                <strong class="tit"><span>실패</span>를 <span>두려워</span>하지 <span>않으며</span>,</strong>
-                <strong class="tit">그 속에서 <span>배움</span>과 <span>성장</span>을</strong>
-                <b class="tit">이어가고 있습니다</b>
-            </div> <!-- //.last_f -->
-            <div class="last_s"></div>
-            <div class="last_t">
-                <div class="name">
-                    <h4>Raphael Lee</h4>
-                    <h4>이충호</h4>
-                </div>
-            </div> <!-- //.last_t -->
-        </div> <!-- //.last_p -->
+        <div class="wrap" data-scroll-container>
+            <div class="first_p">
+                <div class="title">
+                    <h3>Not just design,<br>
+                        but experiences<br>
+                        that connect and inspire</h3>
+                    <p>저는 단순히 디자인을 넘어서, 사람들과 소통하고 영감을 주는 경험을 만들고자 합니다.</p>
+                </div> <!-- //.title -->
+            </div> <!-- //.first_p -->
+            <div class="second_p">
+                <div id="bubbles_i"></div>
+                <div class="top">
+                    <p>저는 디자인을 통해 의미 있는 경험을 만들고자 하는 디자이너입니다.</p>
+                    <div class="bubbles">
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                      </div>
+                </div> <!-- //.top -->
+                <div class="bot">
+                    <div class="hole"><img src="asset/Ellipse.png" alt="hole"></div>
+                </div> <!-- //.bot -->
+            </div> <!-- //.second_p -->
+            <div class="last_p">
+                <div class="black_bg"></div>
+                <div class="last_f">
+                    <div class="txt_wrap">
+                        <strong class="l_txt"><span>실패</span>를 <span>두려워</span>하지 <span>않으며</span>,</strong>
+                        <strong class="l_txt">그 속에서 <span>배움</span>과 <span>성장</span>을</strong>
+                        <b class="l_txt">이어가고 있습니다</b>
+                    </div> <!-- //.txt_wrap -->
+                </div> <!-- //.last_f -->
+                <div class="p_cube">
+
+                </div> <!-- //.p_cube -->
+                <div class="last_s"></div>
+                <div class="last_t">
+                    <div class="name">
+                        <h4>Raphael Lee</h4>
+                        <h4>이충호</h4>
+                    </div>
+                </div> <!-- //.last_t -->
+            </div> <!-- //.last_p -->
+        </div> <!-- //.wrap -->
     </div>
 </body>
 
