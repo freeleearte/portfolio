@@ -21,6 +21,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.min.js"></script>
+    <script src="https://unpkg.com/three@0.141.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.141.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://unpkg.com/three@0.141.0/examples/js/controls/OrbitControls.js"></script>
     <script src="js/common.js"></script>
     <script src="js/profile.js" defer></script>
 </head>
@@ -194,9 +197,9 @@
                 </div> <!-- //.title -->
             </div> <!-- //.first_p -->
             <div class="second_p">
-                <div id="bubbles_i"></div>
                 <div class="top">
                     <p>저는 디자인을 통해 의미 있는 경험을 만들고자 하는 디자이너입니다.</p>
+                    <div id="bubbles_i"></div>
                     <div class="bubbles">
                         <div class="bubble"></div>
                         <div class="bubble"></div>
@@ -263,10 +266,12 @@
                         <b class="l_txt">이어가고 있습니다</b>
                     </div> <!-- //.txt_wrap -->
                 </div> <!-- //.last_f -->
-                <div class="p_cube">
-
-                </div> <!-- //.p_cube -->
-                <div class="last_s"></div>
+                <div class="last_s">
+                    <div class="p_cube_wrap">
+                        <div id="myCanvasContainer">
+                        </div>
+                    </div> <!-- //.p_cube -->
+                </div>
                 <div class="last_t">
                     <div class="name">
                         <h4>Raphael Lee</h4>
