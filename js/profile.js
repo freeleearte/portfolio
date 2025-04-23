@@ -177,6 +177,18 @@ gsap.timeline({
         duration: 1,
         ease: "none"
     })
+    .to(".last_p .black_bg", {
+        opacity: 1,
+        scale: 1,
+        duration: 1,
+        ease: "power1.out"
+    })
+    .to(".last_p .last_f", {
+        opacity: 1,
+        scale: 1,
+        duration: 1,
+        ease: "power1.out"
+    })
     .to(".bot", {
         backgroundColor: "#000",
         duration: 1,
