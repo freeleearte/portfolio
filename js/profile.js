@@ -262,12 +262,12 @@ scene.add(ambientLight);
 
 let loader = new THREE.TextureLoader();
 let material = [
+    './asset/me3.jpg',
+    './asset/me2.jpg',
     './asset/me1.jpg',
-    './asset/me1.jpg',
-    './asset/me1.jpg',
-    './asset/me1.jpg',
-    './asset/me1.jpg',
-    './asset/me1.jpg',
+    './asset/me4.jpg',
+    './asset/me5.jpg',
+    './asset/me6.jpg',
 ].map(pic => {
     return new THREE.MeshLambertMaterial({ map: loader.load(pic) });
 });
