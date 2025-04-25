@@ -89,6 +89,13 @@ var nodes = new vis.DataSet([
         id: 9,
         shape: 'image',
         image: './asset/ps.png',
+        shadow: {
+            enabled: true,
+            color: '#F5A623',  // 원형 배경처럼 보이게
+            size: 30,
+            x: 0,
+            y: 0
+          },
     },
 ]);
 
