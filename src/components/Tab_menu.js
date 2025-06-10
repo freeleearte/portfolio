@@ -4,12 +4,14 @@ import "./Tab_menu.css";
 import tabTop from '../asset/tab_top.png';
 import right from '../asset/right.png';
 import arrow2 from '../asset/arrow2.png';
+import arrow1 from '../asset/arrow_main.png';
 
 const Tab_menu = ({ fadeOut }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [showRight, setShowRight] = useState(false);
   const menuRef = useRef(null);
   const wrapRef = useRef(null);
+  const isFlippedRef = useRef(false);
 
   // 메뉴 열기
   const openMenu = () => {
@@ -39,6 +41,36 @@ const Tab_menu = ({ fadeOut }) => {
     }
   }, [isOpen]);
 
+  const startMainAnimation = (targetPath) => {
+    if (isFlippedRef.current) return;
+    
+    if (menuRef.current) menuRef.current.style.left = '-100%';
+
+    document.querySelector('.box1')?.classList.add('rotate-shrink-expand');
+    document.querySelector('.box2')?.classList.add('rotate-shrink-expand');
+    document.querySelector('.box3')?.classList.add('rotate-shrink-expand');
+    document.querySelector('i')?.classList.add('fadeout');
+
+    setTimeout(() => {
+      document.querySelector('.start')?.classList.add('white-background');
+    }, 2000);
+
+    setTimeout(() => {
+      document.querySelector('.box1')?.classList.add('hide-box');
+      document.querySelector('.box2')?.classList.add('hide-box');
+      document.querySelector('.box3')?.classList.add('hide-box');
+
+      // 선택적으로 특정 콘텐츠 show 가능 (예: 페이지별)
+    }, 3000);
+
+    isFlippedRef.current = true;
+
+    setTimeout(() => {
+      navigate(targetPath);
+      window.scrollTo(0, 0);
+    }, 3500);
+  };
+
   const location = useLocation();
 
   const getTabClass = () => {
@@ -50,26 +82,25 @@ const Tab_menu = ({ fadeOut }) => {
   };
 
   const navigate = useNavigate();
+
+  const handleTabClick = (path) => {
+    closeMenu();
+    if (location.pathname === '/') {
+      startMainAnimation(path);
+    } else {
+      navigate(path);
+      window.scrollTo(0, 0);
+    }
+  };
+
   const goHome = () => {
     closeMenu();
     navigate(`/`);
     window.scrollTo(0, 0);
   }
-  const goProjects = () => {
-    closeMenu();
-    navigate(`/projects`);
-    window.scrollTo(0, 0);
-  }
-  const goProfile = () => {
-    closeMenu();
-    navigate(`/profile`);
-    window.scrollTo(0, 0);
-  }
-  const goContact = () => {
-    closeMenu();
-    navigate(`/contact`);
-    window.scrollTo(0, 0);
-  }
+
+  const isHome = location.pathname === '/';
+  const arrowImage = isHome ? arrow1 : arrow2;
 
   return (
     <div>
@@ -82,13 +113,13 @@ const Tab_menu = ({ fadeOut }) => {
             <i className="fa-solid fa-xmark" onClick={closeMenu}></i>
             <ul>
               <li><div to="/" className="t_home" onClick={goHome}>HOME</div></li>
-              <li><div to="/projects" onClick={goProjects}>PROJECTS</div></li>
-              <li><div to="/profile" onClick={goProfile}>PROFILE</div></li>
-              <li><div to="/contact" className="t_contact" onClick={goContact}>CONTACT</div></li>
+              <li><div to="/projects" onClick={() => handleTabClick('/projects')}>PROJECTS</div></li>
+              <li><div to="/profile" onClick={() => handleTabClick('/profile')}>PROFILE</div></li>
+              <li><div to="/contact" onClick={() => handleTabClick('/contact')}>CONTACT</div></li>
             </ul>
           </div>
         </div>
-        <div className={`right ${showRight ? 'show' : ''}`}>
+        <div className={`right ${showRight ? 'show' : ''}  ${isHome ? 'r_main' : ''}`}>
           <div className="info">
             <div className="txt">
               <p>Click to<br />get Started</p>
@@ -96,7 +127,7 @@ const Tab_menu = ({ fadeOut }) => {
             </div>
             <img alt="info" src={right} />
           </div>
-          <img alt="arrow" src={arrow2} />
+          <img alt="arrow" src={arrowImage} />
         </div>
       </div>
     </div>

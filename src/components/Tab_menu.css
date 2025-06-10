@@ -145,3 +145,9 @@
     width: 100%;
     margin-left: 0;
 }
+
+.fadeout {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}

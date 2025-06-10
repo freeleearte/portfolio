@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import P_Marquee from '../components/P_Marquee';
 import Tab_menu from '../components/Tab_menu';
 import "../components/Home.css"
@@ -12,6 +13,8 @@ const Home = () => {
     const box1Ref = useRef(null);
     const box2Ref = useRef(null);
     const box3Ref = useRef(null);
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         const handleMouseMove = (e) => {
@@ -77,7 +80,7 @@ const Home = () => {
 
         // 3.5초 후 페이지 이동
         setTimeout(() => {
-            window.location.href = `/${target}`; // 원하는 경로로 이동
+            navigate(`/${target}`);
         }, 3500);
     };
     return (
