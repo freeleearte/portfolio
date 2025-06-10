@@ -1,0 +1,203 @@
+@charset "utf-8";
+
+.start {
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    perspective: 1500px;
+    /* 3D 효과를 위한 퍼스펙티브 추가 */
+    transition: background-color 1s ease;
+    transform-style: preserve-3d;
+    /* 자식 요소들이 3D 공간에서 회전할 수 있도록 설정 */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: var(--start-font);
+}
+
+.start>i {
+    position: absolute;
+    color: #fff;
+    left: 50%;
+    top: 200px;
+    transform: translateY(-50%);
+    font-size: 85px;
+    z-index: 10;
+    cursor: pointer;
+    transition: opacity .5s;
+    opacity: 1;
+}
+
+.start .txt {
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    display: none;
+}
+
+.start h2 {
+    font-size: 300px;
+    font-family: var(--start-title-font);
+}
+
+.start h3 {
+    font-weight: 600;
+    font-size: 100px;
+}
+
+.content {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    position: relative;
+    /* top: 50%;
+    transform: translateY(-50%); */
+    color: #000;
+    text-align: center;
+}
+
+/* 기본 박스 스타일 */
+.box1,
+.box2,
+.box3 {
+    width: 1700px;
+    height: 956px;
+    /* border: 5px solid #1C3D6C; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* transition: transform 1s ease, opacity 1s ease; */
+    transform-style: preserve-3d;
+    /* 박스들 자체도 3D 공간에서 움직이게 설정 */
+    position: relative;
+    overflow: hidden;
+    color: #1C3D6C;
+}
+
+.box2 {
+    width: 1480px;
+    height: 832px;
+    color: #F5A623;
+}
+
+.box3 {
+    width: 1260px;
+    height: 708px;
+    color: #44f620;
+}
+
+.start .delayed-link {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.start .txtAniBox {
+    width: 100%;
+    height: 100%;
+    /* background: #fff; */
+    font-size: 30px;
+    line-height: 1.2;
+    padding: 50px 0;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
+}
+
+.start .txtAniBox .scroll {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* .txtAniBox .simply-scroll {
+    background: #ccc;
+} */
+
+.txtAniBox.contact {
+    color: #1C3D6C;
+}
+
+.txtAniBox.profile {
+    color: #F5A623;
+}
+
+.txtAniBox.projects {
+    color: #44f620;
+}
+
+.start .txtAniBox .scroll:nth-child(1),
+.start .txtAniBox .scroll:nth-child(2) {
+    /* background: #000; */
+    position: relative;
+    z-index: 5;
+}
+
+.start .txtAniBox .scroll:nth-child(3) {
+    position: absolute;
+    left: -50%;
+    bottom: 50%;
+    transform: translateY(50%);
+    rotate: -90deg;
+}
+
+.start .txtAniBox .scroll:nth-child(4) {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translateY(50%);
+    rotate: 90deg;
+}
+
+/* 박스들이 회전하면서 크기 축소, 확대하는 애니메이션 */
+@keyframes rotateShrinkExpand {
+    0% {
+        transform: rotateY(0deg) rotateX(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotateY(180deg) rotateX(180deg) scale(0.2);
+    }
+
+    75% {
+        transform: rotateY(270deg) rotateX(270deg) scale(0.2);
+    }
+
+    100% {
+        transform: rotateY(360deg) rotateX(360deg) scale(1);
+    }
+}
+
+.rotate-shrink-expand {
+    animation: rotateShrinkExpand 3s ease-in-out forwards;
+}
+
+/* 박스들이 사라지면서 숨겨짐 */
+.hide-box {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+.white-background {
+    background-color: #fff;
+}
+
+.i-fade-out {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .5s ease-in-out;
+}

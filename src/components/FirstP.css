@@ -1,0 +1,40 @@
+.first_p {
+    width: 100%;
+    height: 100vh;
+}
+
+.first_p .title {
+    margin-top: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.first_p .title h3 {
+    font-family: var(--start-font);
+    font-weight: 800;
+    font-size: 100px;
+}
+
+.first_p .title h3 b {
+    transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-text-stroke-width: 0.1rem;
+    -webkit-text-stroke-color: #000;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(#000, #000);
+    background-size: 100% 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.first_p .title h3 b:hover {
+    background-size: 100% 0;
+}
+
+.first_p .title p {
+    font-family: var(--suit);
+    font-size: 30px;
+}

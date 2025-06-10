@@ -1,0 +1,32 @@
+.Header {
+    width: 1500px;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 10;
+}
+
+.Header.projects {
+    position: fixed;
+}
+
+.Header.profile {
+    position: fixed;
+    top: 0;
+}
+
+.Header.contact {
+    margin-bottom: 15vh;
+}
+
+h2.title {
+    font-family: var(--bungee);
+    font-size: 100px;
+    margin-top: 20px;
+}
+
+i.tab {
+    font-size: 85px;
+    cursor: pointer;
+}

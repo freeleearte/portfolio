@@ -1,0 +1,71 @@
+.f_projects,
+.f_profile,
+.f_contact {
+    cursor: pointer;
+}
+
+.f_left .txtAniBox,
+.f_right .txtAniBox {
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.f_left.out {
+    left: 0;
+    top: 0;
+  }
+  
+  .f_left.in {
+    left: 70px;
+    top: 0;
+  }
+  
+  .f_right.out {
+    right: 0;
+    top: 0;
+  }
+  
+  .f_right.in {
+    right: 70px;
+    top: 0;
+  }
+  
+  .f_left .scroll {
+    rotate: -90deg;
+  }
+  
+  .f_left .txtAniBox .scroll,
+  .f_right .txtAniBox .scroll {
+    height: 70px;
+    width: 100vh;
+  }
+  
+  .f_right .scroll {
+    /* width: 100vh; */
+    rotate: 90deg;
+  }
+  
+  .out .txtAniBox.f_on {
+    display: flex;
+  }
+  
+  .in .txtAniBox.f_on {
+    display: flex;
+  }
+  
+  .f_projects {
+    color: #44f620;
+  }
+  
+  .f_profile {
+    color: #F5A623;
+  }
+  
+  .f_contact {
+    color: #1C3D6C;
+  }

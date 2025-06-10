@@ -1,0 +1,6 @@
+.project_list {
+    padding-block: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
