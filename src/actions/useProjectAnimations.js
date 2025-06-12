@@ -4,9 +4,28 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const useProjectAnimations = () => {
+const useProjectAnimations = (deps = []) => {
     useEffect(() => {
         const elements = document.querySelectorAll(".p_con");
+
+        // 트리거와 Tween 모두 제거
+        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        gsap.globalTimeline.getChildren().forEach(tween => tween.kill());
+
+        // progress bar 애니메이션은 한 번만 생성되도록 따로 조건 처리
+        if (!ScrollTrigger.getById("progress-bar")) {
+            gsap.to(".progress_bar", {
+                id: "progress-bar",
+                width: "180px",
+                ease: "none",
+                scrollTrigger: {
+                    trigger: document.body,
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: true,
+                },
+            });
+        }
 
         elements.forEach((el) => {
             // 기존 ScrollTrigger 제거
@@ -20,16 +39,16 @@ const useProjectAnimations = () => {
             });
 
             // Progress Bar 애니메이션 (한 번만 적용되도록)
-            gsap.to(".progress_bar", {
-                width: "180px",
-                ease: "none",
-                scrollTrigger: {
-                    trigger: document.body,
-                    start: "top top",
-                    end: "bottom bottom",
-                    scrub: true,
-                },
-            });
+            // gsap.to(".progress_bar", {
+            //     width: "180px",
+            //     ease: "none",
+            //     scrollTrigger: {
+            //         trigger: document.body,
+            //         start: "top top",
+            //         end: "bottom bottom",
+            //         scrub: true,
+            //     },
+            // });
 
             const isLeft = el.classList.contains("l_con");
             const isRight = el.classList.contains("r_con");
@@ -175,7 +194,7 @@ const useProjectAnimations = () => {
             ScrollTrigger.getAll().forEach(trigger => trigger.kill());
             gsap.globalTimeline.clear();
         };
-    }, []);
+    }, deps);
 };
 
 export default useProjectAnimations;

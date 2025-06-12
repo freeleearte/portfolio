@@ -5,21 +5,21 @@ import "./ProjectsNav.css";
 const ProjectsNav = ({ onFilter }) => {
     const [activeFilter, setActiveFilter] = useState("all");
 
-    useEffect(() => {
-        gsap.fromTo(
-            `.nav .${activeFilter}`,
-            {
-                scale: 0.8,
-                opacity: 0.5,
-            },
-            {
-                scale: 1,
-                opacity: 1,
-                duration: 0.5,
-                ease: "back.out(1.7)",
-            }
-        );
-    }, [activeFilter]);
+    // useEffect(() => {
+    //     gsap.fromTo(
+    //         `.nav .${activeFilter}`,
+    //         {
+    //             scale: 0.8,
+    //             opacity: 0.5,
+    //         },
+    //         {
+    //             scale: 1,
+    //             opacity: 1,
+    //             duration: 0.5,
+    //             ease: "back.out(1.7)",
+    //         }
+    //     );
+    // }, [activeFilter]);
 
     const handleFilterClick = (filter) => {
         setActiveFilter(filter);
