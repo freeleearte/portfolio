@@ -40,23 +40,6 @@ body {
   /* overflow: hidden; */
 }
 
-/* .txtAniBox .simply-scroll .simply-scroll-clip .simply-scroll-list {
-  display: flex;
-} */
-
-/* .txtAniBox ul {
-  display: flex;
-  height: auto;
-  align-items: center;
-  white-space: nowrap;
-  transform-origin: left top;
-  cursor: pointer;
-} */
-
-.txtAniBox ul li {
-  margin-right: 15px;
-}
-
 .f_left,
 .f_right {
   width: 70px;
@@ -72,4 +55,15 @@ body {
 .show-content {
   display: block;
   opacity: 1;
+}
+
+@media screen and (max-width: 834px) {
+  .inner {
+    max-width: 80%;
+  }
+
+  .f_left,
+  .f_right {
+    width: 30px;
+  }
 }

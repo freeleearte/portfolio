@@ -20,14 +20,6 @@
 }
 
 .start>i {
-    position: absolute;
-    color: #fff;
-    left: 50%;
-    top: 200px;
-    transform: translateY(-50%);
-    font-size: 85px;
-    z-index: 10;
-    cursor: pointer;
     transition: opacity .5s;
     opacity: 1;
 }
@@ -200,4 +192,36 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity .5s ease-in-out;
+}
+
+@media screen and (max-width: 1700px) {
+
+    .box1,
+    .box2,
+    .box3 {
+        width: 95%;
+        height: 95%;
+    }
+
+    .box2 {
+        width: 90%;
+        height: 85%;
+    }
+
+    .box3 {
+        width: 90%;
+        height: 85%;
+    }
+}
+
+@media screen and (max-width: 834px) {
+    .start h2 {
+        font-size: 300px;
+        font-family: var(--start-title-font);
+    }
+
+    .start h3 {
+        font-weight: 600;
+        font-size: 100px;
+    }
 }

@@ -74,11 +74,7 @@ const ProjectList = ({ filter }) => {
     useEffect(() => {
         document.querySelectorAll('.p_con').forEach((el, index) => {
             el.classList.remove('l_con', 'r_con'); // 기존 클래스 제거
-            if (index % 2 === 0) {
-                el.classList.add('l_con');
-            } else {
-                el.classList.add('r_con');
-            }
+            el.classList.add(index % 2 === 0 ? "l_con" : "r_con");
         });
     }, [filteredProjects]); // filteredProjects가 바뀔 때마다 클래스 적용
 

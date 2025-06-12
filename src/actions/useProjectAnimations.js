@@ -38,18 +38,6 @@ const useProjectAnimations = (deps = []) => {
                 if (tween.scrollTrigger?.trigger === el) tween.kill();
             });
 
-            // Progress Bar 애니메이션 (한 번만 적용되도록)
-            // gsap.to(".progress_bar", {
-            //     width: "180px",
-            //     ease: "none",
-            //     scrollTrigger: {
-            //         trigger: document.body,
-            //         start: "top top",
-            //         end: "bottom bottom",
-            //         scrub: true,
-            //     },
-            // });
-
             const isLeft = el.classList.contains("l_con");
             const isRight = el.classList.contains("r_con");
             const img_wrap = el.querySelector(".img_wrap");
