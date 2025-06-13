@@ -151,3 +151,81 @@
     transition: opacity 0.5s ease;
     pointer-events: none;
 }
+
+@media screen and (max-width: 1750px) {
+    .tab_menu .front {
+        width: 40vw;
+        height: 40vw;
+    }
+
+    .tab_menu>img {
+        width: 47.7vw;
+    }
+
+    .tab_menu .front i {
+        right: 7%;
+        top: 7%;
+        font-size: 3vw;
+    }
+
+    .tab_menu .front ul {
+        margin-left: 10%;
+        margin-bottom: 10%;
+        gap: 3vw;
+    }
+
+    .tab_menu .front ul li {
+        font-size: 3vw;
+    }
+
+    .right.r_main {
+        top: 40%;
+        right: 110px;
+    }
+
+    .right .info {
+        position: absolute;
+        right: 280px;
+    }
+
+    .right .info .txt {
+        width: 300px;
+        height: 300px;
+        background: #8B1894;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        font-family: var(--bungee);
+        font-size: 34px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right>img {
+        position: relative;
+        width: 80%;
+        margin-left: 18%;
+    }
+
+    .right.r_main>img {
+        position: relative;
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 1700px) {
+    .tab.home {
+        font-size: 5vw;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .tab.home {
+        font-size: 8vw;
+    }
+}
