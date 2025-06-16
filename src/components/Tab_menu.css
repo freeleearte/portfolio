@@ -24,10 +24,9 @@
 .tab_menu_wrap {
     width: 100vw;
     height: 100vh;
-    position: absolute;
-    left: 50%;
+    position: fixed;
+    left: 0;
     top: 0;
-    transform: translateX(-50%);
     z-index: 999;
     background: #58175C40;
     color: #fff;
@@ -75,7 +74,8 @@
     flex-direction: column;
     margin-left: 100px;
     margin-bottom: 125px;
-    gap: 50px;
+    justify-content: space-between;
+    height: 60%;
 }
 
 .tab_menu .front ul li {
@@ -107,7 +107,7 @@
 .right.r_main {
     position: absolute;
     top: 350px;
-    right: 110px;
+    right: 6vw;
     display: flex;
     align-items: center;
 }
@@ -152,10 +152,16 @@
     pointer-events: none;
 }
 
+@media screen and (max-width: 1850px) {
+    .right.r_main {
+        right: 3vw;
+    }
+}
+
 @media screen and (max-width: 1750px) {
     .tab_menu .front {
         width: 40vw;
-        height: 40vw;
+        height: 85vh;
     }
 
     .tab_menu>img {
@@ -171,32 +177,36 @@
     .tab_menu .front ul {
         margin-left: 10%;
         margin-bottom: 10%;
-        gap: 3vw;
     }
 
     .tab_menu .front ul li {
         font-size: 3vw;
     }
+}
+
+@media screen and (max-width: 1700px) {
+    .tab.home {
+        font-size: 5vw;
+    }
 
     .right.r_main {
         top: 40%;
-        right: 110px;
+        right: -1vw;
     }
 
-    .right .info {
-        position: absolute;
-        right: 280px;
+    .right .info img {
+        width: 30vw;
     }
 
     .right .info .txt {
-        width: 300px;
-        height: 300px;
+        width: 22.3vw;
+        height: 22.3vw;
         background: #8B1894;
         position: absolute;
         left: 0;
         bottom: 0;
         font-family: var(--bungee);
-        font-size: 34px;
+        font-size: 2.5vw;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -213,14 +223,18 @@
 
     .right.r_main>img {
         position: relative;
-        width: 100%;
+        width: 80%;
         margin-left: 0;
     }
 }
 
-@media screen and (max-width: 1700px) {
-    .tab.home {
-        font-size: 5vw;
+@media screen and (max-width: 1400px) {
+    .right.r_main {
+        right: -5vw;
+    }
+
+    .right.r_main>img {
+        width: 70%;
     }
 }
 

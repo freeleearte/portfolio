@@ -30,3 +30,19 @@ i.tab {
     font-size: 85px;
     cursor: pointer;
 }
+
+@media screen and (max-width: 1800px) {
+    .Header {
+        width: 80vw;
+        height: 12vh;
+    }
+
+    h2.title {
+        font-size: 5vw;
+        margin-top: 20px;
+    }
+
+    i.tab {
+        font-size: 4vw;
+    }
+}
