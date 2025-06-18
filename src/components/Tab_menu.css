@@ -3,7 +3,7 @@
     color: #fff;
     left: 50%;
     top: 200px;
-    transform: translateY(-50%);
+    transform: translateX(-50%);
     font-size: 85px;
     z-index: 10;
     cursor: pointer;
@@ -231,11 +231,13 @@
 
 @media screen and (max-width: 1400px) {
     .right.r_main {
-        right: -5vw;
+        right: 2vw;
     }
 
     .right.r_main>img {
-        width: 70%;
+        width: 20vw;
+        object-fit: contain;
+        margin-left: 0;
     }
 
     .right .info {
@@ -246,6 +248,28 @@
         width: 20vw;
         object-fit: contain;
         margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .tab_menu .front i {
+        font-size: 8vw;
+    }
+
+    .tab_menu .front ul {
+        margin-bottom: 40%;
+    }
+
+    .tab_menu .front ul li {
+        font-size: 6vw;
+    }
+
+    .tab.home {
+        font-size: 5vw;
+    }
+
+    .right .info .txt {
+        font-size: 3vw;
     }
 }
 

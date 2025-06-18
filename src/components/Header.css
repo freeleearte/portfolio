@@ -5,6 +5,7 @@
     justify-content: space-between;
     align-items: flex-end;
     z-index: 10;
+    position: relative;
 }
 
 .Header.projects {
@@ -48,5 +49,20 @@ i.tab {
 
     i.tab {
         font-size: 4vw;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    i.tab {
+        font-size: 6vw;
+        /* position: absolute;
+        right: 5vw;
+        top: 3vh; */
+    }
+
+    .Header>div:nth-child(3) {
+        position: absolute;
+        right: 5vw;
+        top: 3vh;
     }
 }
