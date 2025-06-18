@@ -47,8 +47,12 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    margin-bottom: 20vh;
 }
 
 .second_p .bot .hole {
     opacity: 0;
+    scale: .01;
+    transform: translateY(-50%);
+    position: absolute;
 }

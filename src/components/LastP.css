@@ -69,8 +69,8 @@
     height: 100vh;
     background: #fff;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 .last_p .last_t .name {

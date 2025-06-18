@@ -26,9 +26,11 @@ const ProjectsItem = ({ index, title, image, alt, tags, visitLink, reviewLink, t
                     <li className="visit">
                         <a href={visitLink} target="_blank" rel="noopener noreferrer">Visit</a>
                     </li>
-                    <li className="review">
-                        <a href={reviewLink} target="_blank" rel="noopener noreferrer">Review</a>
-                    </li>
+                    {reviewLink && reviewLink.trim() !== "" && (
+                        <li className="review">
+                            <a href={reviewLink} target="_blank" rel="noopener noreferrer">Review</a>
+                        </li>
+                    )}
                 </ul>
             </div>
         </div>

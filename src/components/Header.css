@@ -44,7 +44,6 @@ i.tab {
 
     h2.title {
         font-size: 5vw;
-        margin-top: 20px;
     }
 
     i.tab {
@@ -54,15 +53,19 @@ i.tab {
 
 @media screen and (max-width: 1000px) {
     i.tab {
-        font-size: 6vw;
-        /* position: absolute;
-        right: 5vw;
-        top: 3vh; */
+        font-size: 8vw;
     }
 
     .Header>div:nth-child(3) {
         position: absolute;
         right: 5vw;
         top: 3vh;
+    }
+
+    h2.title {
+        position: absolute;
+        left: 1vw;
+        top: 2vh;
+        font-size: 8vw;
     }
 }

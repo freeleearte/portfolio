@@ -94,3 +94,12 @@
     width: 100vh;
   }
 }
+
+@media screen and (max-width: 1300px) {
+
+  .f_left .txtAniBox,
+  .f_right .txtAniBox {
+    font-size: 3vw;
+    line-height: 1.2;
+  }
+}

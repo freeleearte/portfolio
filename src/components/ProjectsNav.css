@@ -84,3 +84,17 @@ ul.nav li.on .progress_bar {
         gap: 2vw;
     }
 }
+
+@media screen and (max-width: 1000px) {
+    ul.nav {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    ul.nav li p {
+        font-size: 4vw;
+        width: 15vw;
+        height: 5vw;
+    }
+}
