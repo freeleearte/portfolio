@@ -60,13 +60,28 @@ body {
   opacity: 1;
 }
 
-@media screen and (max-width: 834px) {
+.wrap {
+  width: 100%;
+}
+
+@media screen and (max-width: 1800px) {
   .inner {
     max-width: 80%;
   }
+}
+
+@media screen and (max-width: 1300px) {
 
   .f_left,
   .f_right {
-    width: 30px;
+    width: 5vw;
+  }
+}
+
+@media screen and (max-width: 834px) {
+
+  .f_left,
+  .f_right {
+    width: 2vw;
   }
 }

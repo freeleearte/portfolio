@@ -9,6 +9,15 @@ const CustomCursor = () => {
             const cursor = cursorRef.current;
             if (!cursor) return;
 
+            const isMouseDevice = window.matchMedia('(pointer: fine)').matches;
+
+            if (!isMouseDevice) {
+                cursor.style.display = 'none';
+                return;
+            } else {
+                cursor.style.display = 'block';
+            }
+
             // 페이지 좌표 계산 (스크롤을 고려)
             const cursorCx = cursor.offsetWidth / 2;
             const cursorCy = cursor.offsetHeight / 2;

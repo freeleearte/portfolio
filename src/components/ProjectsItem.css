@@ -153,3 +153,72 @@
 .p_con.r_con .img_wrap .img {
     transform: rotateZ(-4deg);
 }
+
+@media screen and (max-width: 1800px) {
+    .p_con {
+        width: 80vw;
+        height: 400px;
+        padding-block: 100px;
+        margin-block: 100px;
+    }
+
+    .p_con .info .txt h3 {
+        font-size: 4vw;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .p_con .info .txt ul.hash li {
+        font-size: 20px;
+    }
+
+    .p_con .info ul.btn li {
+        width: 8vw;
+        height: 2.5vw;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .p_con .img_wrap .img {
+        width: 100%;
+        height: 40vw;
+    }
+
+    .p_con .info .txt h3 {
+        font-size: 5vw;
+        margin-bottom: 20px;
+    }
+
+    .p_con .info ul.btn li a {
+        font-size: 16px;
+    }
+
+    .p_con .info ul.btn li {
+        width: 80px;
+        height: 25px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .p_con {
+        width: 50vw;
+        flex-direction: column;
+        height: 60vh;
+        padding-block: 0;
+        margin-block: 100px;
+    }
+
+    .p_con .img_wrap {
+        margin-bottom: 0;
+    }
+
+    .p_con .info {
+        width: 80vw;
+        margin-left: 0;
+    }
+
+    .p_con .info .txt {
+        /* width: 50vw; */
+    }
+}

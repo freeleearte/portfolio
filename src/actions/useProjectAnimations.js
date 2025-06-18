@@ -16,7 +16,7 @@ const useProjectAnimations = (deps = []) => {
         if (!ScrollTrigger.getById("progress-bar")) {
             gsap.to(".progress_bar", {
                 id: "progress-bar",
-                width: "180px",
+                width: "100%",
                 ease: "none",
                 scrollTrigger: {
                     trigger: document.body,
@@ -169,7 +169,7 @@ const useProjectAnimations = (deps = []) => {
             }
 
             gsap.to(info, {
-                marginTop: "100px",
+                marginTop: "10vh",
                 scrollTrigger: {
                     ...baseAnimation,
                     start: "top center",

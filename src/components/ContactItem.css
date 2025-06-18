@@ -90,3 +90,55 @@
     padding: 15px;
     border-radius: 10px;
 }
+
+@media screen and (max-width: 1500px) {
+    .item_wrap .top p {
+        font-size: 4vw;
+    }
+
+    .item_wrap .top i {
+        font-size: 6vw;
+    }
+
+    .item_wrap em {
+        font-size: 3vw;
+    }
+
+    .item_wrap .info {
+        top: 12vh;
+    }
+
+    .item_wrap.instagram .info {
+        top: 25%;
+        width: 60%;
+        gap: 5vw;
+    }
+
+    .item_wrap.linkedIn .info i {
+        font-size: 4vw;
+    }
+
+    .item_wrap.instagram .info img {
+        width: 12vw;
+    }
+
+    .item_wrap.linkedIn a {
+        padding: 1vw;
+        border-radius: 2vw;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .item_wrap .info i {
+        font-size: 3vw;
+        margin-left: 2vw;
+    }
+
+    .item_wrap.instagram .info em {
+        font-size: 2.5vw;
+    }
+
+    .item_wrap.instagram .info em b {
+        font-size: 3vw;
+    }
+}

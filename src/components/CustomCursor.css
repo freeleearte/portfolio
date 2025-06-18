@@ -2,12 +2,13 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 80px;
-    height: 80px;
+    width: 4vw;
+    height: 4vw;
     background-color: #fff;
     border-radius: 50%;
     z-index: 9999;
     transform: translate(-50%, -50%);
     pointer-events: none;
     mix-blend-mode: difference;
+    display: none;
 }

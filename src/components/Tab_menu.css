@@ -25,7 +25,8 @@
     width: 100vw;
     height: 100vh;
     position: fixed;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     top: 0;
     z-index: 999;
     background: #58175C40;
@@ -235,6 +236,16 @@
 
     .right.r_main>img {
         width: 70%;
+    }
+
+    .right .info {
+        right: 15vw;
+    }
+
+    .right>img {
+        width: 20vw;
+        object-fit: contain;
+        margin-left: 0;
     }
 }
 

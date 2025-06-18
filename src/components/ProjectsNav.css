@@ -44,11 +44,11 @@ ul.nav li.art.on p {
 }
 
 ul.nav li .progress_bar {
-    margin-top: 10px;
-    width: 10px;
-    height: 10px;
+    margin-top: 1vw;
+    width: 1vw;
+    height: 0.8vw;
     background: #269210;
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 1vw 1vw 1vw 1vw;
     display: none;
 }
 
@@ -78,5 +78,9 @@ ul.nav li.on .progress_bar {
 @media screen and (max-width: 1200px) {
     ul.nav li p {
         height: 4vw;
+    }
+
+    ul.nav {
+        gap: 2vw;
     }
 }

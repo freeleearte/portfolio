@@ -1,7 +1,7 @@
 .f_projects,
 .f_profile,
 .f_contact {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .f_left .txtAniBox,
@@ -16,56 +16,81 @@
 }
 
 .f_left.out {
-    left: 0;
-    top: 0;
+  left: 0;
+  top: 0;
+}
+
+.f_left.in {
+  left: 70px;
+  top: 0;
+}
+
+.f_right.out {
+  right: 0;
+  top: 0;
+}
+
+.f_right.in {
+  right: 70px;
+  top: 0;
+}
+
+.f_left .scroll {
+  rotate: -90deg;
+}
+
+.f_left .txtAniBox .scroll,
+.f_right .txtAniBox .scroll {
+  height: 70px;
+  width: 100vh;
+}
+
+.f_right .scroll {
+  /* width: 100vh; */
+  rotate: 90deg;
+}
+
+.out .txtAniBox.f_on {
+  display: flex;
+}
+
+.in .txtAniBox.f_on {
+  display: flex;
+}
+
+.f_projects {
+  color: #44f620;
+}
+
+.f_profile {
+  color: #F5A623;
+}
+
+.f_contact {
+  color: #1C3D6C;
+}
+
+@media screen and (max-width: 1300px) {
+
+  .f_left .txtAniBox,
+  .f_right .txtAniBox {
+    font-size: 2vw;
+    line-height: 1.2;
   }
-  
+
   .f_left.in {
-    left: 70px;
+    left: 5vw;
     top: 0;
   }
-  
-  .f_right.out {
-    right: 0;
-    top: 0;
-  }
-  
+
   .f_right.in {
-    right: 70px;
+    right: 5vw;
     top: 0;
   }
-  
-  .f_left .scroll {
-    rotate: -90deg;
-  }
-  
+
   .f_left .txtAniBox .scroll,
   .f_right .txtAniBox .scroll {
-    height: 70px;
+    height: 5vw;
     width: 100vh;
   }
-  
-  .f_right .scroll {
-    /* width: 100vh; */
-    rotate: 90deg;
-  }
-  
-  .out .txtAniBox.f_on {
-    display: flex;
-  }
-  
-  .in .txtAniBox.f_on {
-    display: flex;
-  }
-  
-  .f_projects {
-    color: #44f620;
-  }
-  
-  .f_profile {
-    color: #F5A623;
-  }
-  
-  .f_contact {
-    color: #1C3D6C;
-  }
+}
