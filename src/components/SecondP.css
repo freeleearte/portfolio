@@ -22,7 +22,7 @@
 .second_p .top p {
     font-family: var(--suit);
     font-weight: 800;
-    font-size: 50px;
+    font-size: 3vw;
     text-align: center;
     margin-top: 100px;
 }

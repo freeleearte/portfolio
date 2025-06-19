@@ -1,80 +1,103 @@
 import { useEffect } from "react";
 import { DataSet, Network } from "vis-network/standalone";
 import "./SecondP.css";
-import hole from "../asset/Ellipse.png"
+import hole from "../asset/Ellipse.png";
+import krImg from "../asset/kr.png";
+import usImg from "../asset/us.png";
+import cssImg from "../asset/css.png";
+import figmaImg from "../asset/figma.png";
+import gptImg from "../asset/gpt.png";
+import htmlImg from "../asset/html.png";
+import illustImg from "../asset/illust.png";
+import jsImg from "../asset/js.png";
+import psImg from "../asset/ps.png";
 
 const SecondP = () => {
     useEffect(() => {
         // vis.js 그래프
         var nodes = new DataSet([
-            { label: "Graphic Design" },
+            {
+                label: "Graphic Design",
+                font: { size: 16, color: "#fff", face: "Bungee", vadjust: 0 },
+            },
             {
                 label: "Computer Science",
-                size: 300
-                // widthConstraint: { minimum: 800 },
+                font: { size: 30, color: "#fff", face: "Bungee", vadjust: 0 },
             },
             {
                 id: 1,
                 shape: 'image',
-                image: '../asset/kr.png',
+                image: krImg,
             },
             {
                 id: 2,
                 shape: 'image',
-                image: '../asset/us.png',
+                image: usImg,
             },
             {
                 id: 3,
                 shape: 'image',
-                image: '../asset/css.png',
+                image: cssImg,
             },
             {
                 id: 4,
                 shape: 'image',
-                image: '../asset/figma.png',
+                image: figmaImg,
             },
             {
                 id: 5,
                 shape: 'image',
-                image: '../asset/gpt.png',
+                image: gptImg,
             },
             {
                 id: 6,
                 shape: 'image',
-                image: '../asset/html.png',
+                image: htmlImg,
             },
             {
                 id: 7,
                 shape: 'image',
-                image: '../asset/illust.png',
+                image: illustImg,
             },
             {
                 id: 8,
                 shape: 'image',
-                image: '../asset/js.png',
+                image: jsImg,
             },
             {
                 id: 9,
                 shape: 'image',
-                image: '../asset/ps.png',
-                shadow: {
-                    enabled: true,
-                    color: '#F5A623',  // 원형 배경처럼 보이게
-                    size: 30,
-                    x: 0,
-                    y: 0
-                },
+                image: psImg,
             },
         ]);
 
         const container = document.getElementById("bubbles_i");
         if (container) {
-            new Network(container, { nodes }, {
+            const network = new Network(container, { nodes }, {
                 nodes: {
-                    shape: "dot",
-                    size: 16,
-                    font: { size: 14, color: "#fff" },
-                    color: { background: "#FF5B5B" },
+                    shape: "box",
+                    size: 30,
+                    font: { size: 16, color: "#fff", face: "Arial Black", vadjust: 0 },
+                    borderWidth: 20, // 테두리 두께
+                    shadow: {
+                        enabled: true,
+                        color: 'rgba(255, 91, 91, 0.4)', // 유사한 그림자 느낌
+                        size: 25,
+                        x: 0,
+                        y: 0,
+                    },
+                    color: {
+                        background: "#FF5B5B30",
+                        border: "#FF5B5B30",
+                        highlight: {
+                            background: "#FF5B5B30",
+                            border: "#FF5B5B30",
+                        },
+                    },
+                    shapeProperties: {
+                        useBorderWithImage: true,  // 이미지 뒤에 배경 원형 보여줌
+                        borderRadius: 0
+                    }
                 },
                 edges: {
                     width: 2,
@@ -83,12 +106,31 @@ const SecondP = () => {
                 physics: {
                     enabled: true,
                     stabilization: false,
-                    barnesHut: {
-                        gravitationalConstant: -2000,
-                        springConstant: 0.04,
-                        springLength: 95,
+                    solver: "forceAtlas2Based",
+                    forceAtlas2Based: {
+                        gravitationalConstant: -100,   // 더 세게 끌어당김
+                        centralGravity: 0.01,          // 중앙 집중력 낮춤 (더 멀리 퍼짐)
+                        springLength: 100,             // 💡 간격 늘리기
+                        springConstant: 0.01
                     },
+                    timestep: 0.3
                 },
+                interaction: {
+                    selectable: false,
+                    zoomView: false,
+                    dragView: false,
+                    hover: false,
+                },
+            });
+
+            network.on("click", (params) => {
+                if (params.nodes.length > 0) {
+                    network.unselectAll(); // 선택된 노드 해제
+                }
+            });
+
+            network.on("dragEnd", () => {
+                network.unselectAll();
             });
         }
     }, []);
@@ -97,7 +139,7 @@ const SecondP = () => {
         <div className="second_p">
             <div className="top">
                 <p>저는 디자인을 통해 의미 있는 경험을 만들고자 하는 디자이너입니다.</p>
-                {/* <div id="bubbles_i"></div> */}
+                <div id="bubbles_i"></div>
             </div>
             <div className="bot">
                 <div className="hole"><img src={hole} alt="hole" /></div>

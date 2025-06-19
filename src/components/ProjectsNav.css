@@ -98,3 +98,11 @@ ul.nav li.on .progress_bar {
         height: 5vw;
     }
 }
+
+@media screen and (max-width: 500px) {
+    ul.nav li p {
+        font-size: 20px;
+        width: 18vw;
+        height: 8vw;
+    }
+}

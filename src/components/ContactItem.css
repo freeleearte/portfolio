@@ -43,7 +43,7 @@
 .item_wrap.instagram .info {
     width: 50%;
     top: 50px;
-    left: 50%;
+    left: 60%;
     justify-content: space-between;
 }
 
@@ -70,7 +70,7 @@
 
 .item_wrap.instagram .info img {
     width: 200px;
-    border-radius: 10px;
+    border-radius: 1vw;
     align-self: center;
 }
 
@@ -119,7 +119,7 @@
     }
 
     .item_wrap.instagram .info img {
-        width: 12vw;
+        width: 10vw;
     }
 
     .item_wrap.linkedIn a {
@@ -140,5 +140,12 @@
 
     .item_wrap.instagram .info em b {
         font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .item_wrap.instagram .info {
+        top: 40%;
+        left: 50%;
     }
 }

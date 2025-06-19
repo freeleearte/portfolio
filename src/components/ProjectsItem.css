@@ -206,7 +206,27 @@
         flex-direction: column;
         height: 60vh;
         padding-block: 0;
-        margin-block: 100px;
+        margin-block: 5vh;
+    }
+
+    .p_con:first-child {
+        margin-top: 20vh;
+    }
+
+    .p_con.l_con {
+        justify-content: center;
+    }
+    
+    .p_con.r_con {
+        justify-content: center;
+    }
+
+    .p_con.l_con .img_wrap .img {
+        transform: rotateZ(0);
+    }
+    
+    .p_con.r_con .img_wrap .img {
+        transform: rotateZ(0);
     }
 
     .p_con .img_wrap {
@@ -216,9 +236,24 @@
     .p_con .info {
         width: 80vw;
         margin-left: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .p_con .info .txt h3 {
+        font-size: 40px;
     }
 
     .p_con .info .txt {
         /* width: 50vw; */
+    }
+
+    .p_con .info .txt ul.hash {
+        justify-content: center;
+    }
+
+    .p_con .info ul.btn li {
+        width: 100px;
+        height: 40px;
     }
 }

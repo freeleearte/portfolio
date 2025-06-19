@@ -23,7 +23,14 @@ ul.c_menu li:hover .item_wrap {
 ul.c_menu li:hover .instagram {
     height: 165%;
     background: #2a72d8;
-    transform: rotateX(-5deg) translateZ(-5px) translateY(-130px);
+    transform: rotateX(-5deg) translateZ(-5px) translateY(-100px);
+    color: #fff;
+}
+
+ul.c_menu li:hover .linkedIn {
+    height: 120%;
+    background: #2a72d8;
+    transform: rotateX(-5deg) translateZ(-5px) translateY(-30px);
     color: #fff;
 }
 
