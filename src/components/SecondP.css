@@ -1,5 +1,6 @@
 .second_p {
     position: relative;
+    overflow: hidden;
 }
 
 #bubbles_i {
@@ -55,4 +56,18 @@
     scale: .01;
     transform: translateY(-50%);
     position: absolute;
+}
+
+@media screen and (max-width: 500px) {
+    .second_p .top p {
+        width: 80%;
+        margin-inline: auto;
+        font-size: 8vw;
+        line-height: 1.8;
+        margin-top: 100px;
+    }
+
+    #bubbles_i {
+        top: 20%;
+    }
 }

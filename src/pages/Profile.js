@@ -104,6 +104,7 @@ const Profile = () => {
         })
             .to(".p_cube_wrap", {
                 top: 150 + '%',
+                // translateY: -50 + '%',
                 left: 20 + '%',
                 scale: 2,
                 duration: 1,

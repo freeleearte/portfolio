@@ -92,3 +92,24 @@
 .last_p .last_t .name h4:last-child {
     font-family: var(--suit);
 }
+
+
+@media screen and (max-width: 1500px) {
+    .p_cube_wrap {
+        width: 35vw;
+        height: 35vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .last_p .last_t .name {
+        font-size: 10vw;
+        width: 700px;
+        transform: translateX(30%);
+        gap: 5vh;
+    }
+
+    .last_p .last_f {
+        font-size: 7vw;
+    }
+}

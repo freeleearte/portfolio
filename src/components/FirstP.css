@@ -38,3 +38,18 @@
     font-family: var(--suit);
     font-size: 2.2vw;
 }
+
+@media screen and (max-width: 500px) {
+    .first_p .title {
+        margin-top: 20vh;
+    }
+
+    .first_p .title h3 {
+        font-size: 12vw;
+    }
+
+    .first_p .title p {
+        font-size: 6vw;
+        line-height: 1.4;
+    }
+}
