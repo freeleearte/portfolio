@@ -31,10 +31,10 @@ const useProjectAnimations = (deps = []) => {
 
             // matchMedia로 반응형 처리
             ScrollTrigger.matchMedia({
-                "(min-width: 501px)": () => {
+                "(min-width: 1051px)": () => {
                     elements.forEach(el => applyAnimation(el));
                 },
-                "(max-width: 500px)": () => {
+                "(max-width: 1050px)": () => {
                     elements.forEach(el => {
                         const img_wrap = el.querySelector(".img_wrap");
                         const tri_b = el.querySelector(".img_wrap .tri_b");
@@ -86,7 +86,7 @@ const applyAnimation = (el) => {
     const baseAnimation = {
         trigger: el,
         scrub: true,
-        ease: "none",
+        ease: "power2.out",
     };
 
     if (isLeft) {
@@ -117,8 +117,8 @@ const applyAnimation = (el) => {
             rotateZ: "6deg",
             scrollTrigger: {
                 ...baseAnimation,
-                start: "center center-=50",
-                end: "bottom center-=80",
+                start: "center center-=150",
+                end: "bottom center-=180",
             },
         });
 
@@ -129,8 +129,8 @@ const applyAnimation = (el) => {
             immediateRender: false,
             scrollTrigger: {
                 ...baseAnimation,
-                start: "center center-=40",
-                end: "bottom center",
+                start: "center top+=200",
+                end: "center top",
             },
         });
     }
@@ -163,8 +163,8 @@ const applyAnimation = (el) => {
             rotateZ: "-6deg",
             scrollTrigger: {
                 ...baseAnimation,
-                start: "center center-=50",
-                end: "bottom center-=80",
+                start: "center center-=150",
+                end: "bottom center-=180",
             },
         });
 
@@ -175,8 +175,8 @@ const applyAnimation = (el) => {
             immediateRender: false,
             scrollTrigger: {
                 ...baseAnimation,
-                start: "center center-=40",
-                end: "bottom center",
+                start: "center top+=200",
+                end: "center top",
             },
         });
     }

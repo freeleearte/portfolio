@@ -46,7 +46,7 @@ export const projects = [
         alt: "EDM 웹사이트",
         tags: ["Visual Design", "JavaScript", "HTML/CSS", "Swiper", "Interactive"],
         visitLink: "https://freeleearte.github.io/edm/",
-        reviewLink: "https://www.figma.com/proto/oHIfuqpiW8oeAjy0pjLLqH/%EC%9D%B4%EC%B6%A9%ED%98%B8?page-id=679%3A2241&node-id=916-455&viewport=-2798%2C469%2C0.23&t=hlUe6HS6HdzpbEUm-1&scaling=min-zoom&content-scaling=fixed",
+        reviewLink: "",
         type: "live",
     },
     {
@@ -55,7 +55,7 @@ export const projects = [
         alt: "남산 리뉴얼 웹사이트",
         tags: ["Renewal", "Responsive", "JavaScript", "HTML/CSS", "Tourism"],
         visitLink: "https://freeleearte.github.io/namsan/",
-        reviewLink: "#",
+        reviewLink: "",
         type: "live",
     },
     {

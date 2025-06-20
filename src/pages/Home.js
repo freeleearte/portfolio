@@ -83,6 +83,18 @@ const Home = () => {
             navigate(`/${target}`);
         }, 3500);
     };
+
+    /* 마우스가 없는 디바이스일 경우 box3가 먼저 보이게 */
+    useEffect(() => {
+        const isTouchDevice = () =>
+            'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+        if (isTouchDevice()) {
+            setHoveredBox('box3');
+        }
+    }, []);
+
+
     return (
         <div className="start">
             <Tab_menu fadeOut={`${!isIconVisible ? 'i-fade-out' : ''}`} />

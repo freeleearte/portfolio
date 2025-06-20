@@ -37,8 +37,8 @@ const Profile = () => {
             }
         })
             .to(".hole", {
-                scale: 300,
-                yPercent: 50,
+                scale: 500,
+                yPercent: 100,
                 duration: 1,
                 ease: "none"
             })
