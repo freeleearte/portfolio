@@ -31,10 +31,10 @@ const useProjectAnimations = (deps = []) => {
 
             // matchMedia로 반응형 처리
             ScrollTrigger.matchMedia({
-                "(min-width: 768px)": () => {
+                "(min-width: 501px)": () => {
                     elements.forEach(el => applyAnimation(el));
                 },
-                "(max-width: 767px)": () => {
+                "(max-width: 500px)": () => {
                     elements.forEach(el => {
                         const img_wrap = el.querySelector(".img_wrap");
                         const tri_b = el.querySelector(".img_wrap .tri_b");
