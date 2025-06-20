@@ -138,7 +138,7 @@ const SecondP = () => {
     return (
         <div className="second_p">
             <div className="top">
-                <p>저는 디자인을 통해 의미 있는 경험을 만들고자 하는 디자이너입니다.</p>
+                <p>디자인과 프론트엔드로 마음을 잇는 경험을 만듭니다.</p>
                 <div id="bubbles_i"></div>
             </div>
             <div className="bot">
