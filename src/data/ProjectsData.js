@@ -20,6 +20,19 @@ import typographicmockImg from "../asset/Typographicmock.png";
 import venusmockImg from "../asset/Venusmock.png";
 import wavemockImg from "../asset/Wavemock.png";
 import worldmockImg from "../asset/Worldmock.png";
+import dontImg from "../asset/dont.png";
+import seeImg from "../asset/see.png";
+import shoe1Img from "../asset/shoe1.png";
+import shoe2Img from "../asset/shoe2.jpg";
+import shoe3Img from "../asset/shoe3.jpg";
+import adamImg from "../asset/adam.png";
+import fatigueImg from "../asset/fatigue.png";
+import marketImg from "../asset/market.jpg";
+import la1Img from "../asset/la1.jpg";
+import la2Img from "../asset/la2.jpg";
+import mutatedImg from "../asset/mutated.png";
+import venus1Img from "../asset/venus1.jpg";
+import venus2Img from "../asset/venus2.jpg";
 
 export const projects = [
     {
@@ -47,7 +60,7 @@ export const projects = [
         tags: ["Visual Design", "JavaScript", "HTML/CSS", "Swiper", "Interactive"],
         visitLink: "https://freeleearte.github.io/edm/",
         reviewLink: "",
-        type: "live",
+        type: "mock",
     },
     {
         title: "Namsan",
@@ -56,7 +69,7 @@ export const projects = [
         tags: ["Renewal", "Responsive", "JavaScript", "HTML/CSS", "Tourism"],
         visitLink: "https://freeleearte.github.io/namsan/",
         reviewLink: "",
-        type: "live",
+        type: "mock",
     },
     {
         title: "Vocapet",
@@ -86,6 +99,7 @@ export const projects = [
     {
         title: "Don’t fxxk my vibe",
         image: dontmockImg,
+        artImg: dontImg,
         alt: "Don’t fxxk my vibe",
         tags: ["Photoshop", "Typography", "Self", "Poster", "Graphic Design"],
         visitLink: "#",
@@ -94,6 +108,7 @@ export const projects = [
     {
         title: "SEE",
         image: seemockImg,
+        artImg: seeImg,
         alt: "SEE",
         tags: ["Photoshop", "Typography", "Self", "Poster", "Graphic Design"],
         visitLink: "#",
@@ -102,6 +117,9 @@ export const projects = [
     {
         title: "Shoe designer series",
         image: shoemockImg,
+        artImg: shoe1Img,
+        artImg1: shoe2Img,
+        artImg2: shoe3Img,
         alt: "Shoe designer series",
         tags: ["Photoshop", "Typography", "Shoe", "Poster", "Graphic Design"],
         visitLink: "#",
@@ -110,6 +128,7 @@ export const projects = [
     {
         title: "Self Portrait Clone: Adam",
         image: adammockImg,
+        artImg: adamImg,
         alt: "Self Portrait Clone: Adam",
         tags: ["Charcoal", "Acrylic", "Self", "Portrait"],
         visitLink: "#",
@@ -118,6 +137,7 @@ export const projects = [
     {
         title: "Fatigue (疲勞困憊)",
         image: fatiguemockImg,
+        artImg: fatigueImg,
         alt: "Fatigue (疲勞困憊)",
         tags: ["Charcoal", "Acrylic", "Tape", "People", "Portrait"],
         visitLink: "#",
@@ -126,6 +146,7 @@ export const projects = [
     {
         title: "Korean Traditional Market",
         image: marketmockImg,
+        artImg: marketImg,
         alt: "Korean Traditional Market",
         tags: ["Photoshop", "Tradition", "Market", "Poster", "Graphic Design"],
         visitLink: "#",
@@ -134,6 +155,8 @@ export const projects = [
     {
         title: "Los Angeles Posters",
         image: lamockImg,
+        artImg: la1Img,
+        artImg1: la2Img,
         alt: "Los Angeles Posters",
         tags: ["Collage", "LA", "EDM", "Poster", "Influence"],
         visitLink: "#",
@@ -142,6 +165,7 @@ export const projects = [
     {
         title: "Mutated Memory",
         image: mutatedmockImg,
+        artImg: mutatedImg,
         alt: "Mutated Memory",
         tags: ["Found Objects", "Acrylic", "Impromptu", "Shoe Insoles", "Glass Jar"],
         visitLink: "#",
@@ -190,7 +214,10 @@ export const projects = [
     {
         title: "Venus series",
         image: venusmockImg,
+        artImg: venus1Img,
+        artImg1: venus2Img,
         alt: "Venus series",
+        description: "The first piece in the “Venus” series out of two pieces, began to explore the theme of curves. I gathered magazine photos that illustrated the curves of my favorite Korean singer Lee Hyori’s body. There was much contemplation on how to incorporate Venus head sculpture and geometric forms with an urban feel. I experimented with various composition by sketching little thumbnails in my sketchbook, and the composition of the Venus work stood out for me to create as a collage. While not drawing direct inspiration from Greek’s venus figure, I used colors to represent the modern beauty portrayed in media.",
         tags: ["Collage", "Curves", "Venus", "Beauty", "Renewal"],
         visitLink: "#",
         type: "art",
