@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import ProjectsModal from "./ProjectsModal";
 import "./ProjectsItem.css";
 
-const ProjectsItem = ({ index, title, image, alt, tags, visitLink, reviewLink, type }) => {
+const ProjectsItem = ({ index, title, image, alt, tags, visitLink, reviewLink, type, ...props }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const itemRef = useRef(null);
 
@@ -15,6 +15,17 @@ const ProjectsItem = ({ index, title, image, alt, tags, visitLink, reviewLink, t
 
     const closeModal = () => {
         setIsModalOpen(false);
+    };
+
+    const selectedProject = {
+        title,
+        image,
+        alt,
+        tags,
+        visitLink,
+        reviewLink,
+        type,
+        ...props
     };
 
     return (
@@ -93,7 +104,7 @@ const ProjectsItem = ({ index, title, image, alt, tags, visitLink, reviewLink, t
                         </button>
 
                         {/* 모달 안에 보여줄 내용 */}
-                        <ProjectsModal initialIndex={index} />
+                        <ProjectsModal selectedProject={selectedProject} />
                     </div>
                 </div>
             )}

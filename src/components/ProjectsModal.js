@@ -1,45 +1,76 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { projects } from "../data/ProjectsData";
+import "./ProjectsModal.css";
 
-const ProjectsModal = ({ initialIndex = 0 }) => {
-    const artProjects = projects.filter((project) => project.type === "art");
-    const [index, setIndex] = useState(initialIndex - 1);
+const ProjectsModal = ({ filterType = "art", selectedProject }) => {
+    const filteredProjects = projects.filter(p =>
+        filterType === "all" ? true : p.type === filterType
+    );
+
+    const [currentProject, setCurrentProject] = useState(
+        selectedProject || filteredProjects[0]
+    );
+
+    // 필터가 바뀌거나 selectedProject가 변경되었을 때
+    useEffect(() => {
+        if (!filteredProjects.includes(currentProject)) {
+            setCurrentProject(filteredProjects[0]);
+        }
+    }, [filterType]);
+
+    const currentIndex = filteredProjects.findIndex(
+        (p) => p.title === currentProject?.title
+    );
 
     const handleNext = () => {
-        setIndex((prev) => (prev + 1) % artProjects.length);
+        const next =
+            filteredProjects[(currentIndex + 1) % filteredProjects.length];
+        setCurrentProject(next);
     };
 
     const handlePrev = () => {
-        setIndex((prev) => (prev - 1 + artProjects.length) % artProjects.length);
+        const prev =
+            filteredProjects[
+            (currentIndex - 1 + filteredProjects.length) %
+            filteredProjects.length
+            ];
+        setCurrentProject(prev);
     };
 
-    const current = artProjects[index];
+    const images = Object.keys(selectedProject)
+    .filter(key => key.startsWith("artImg") && selectedProject[key])
+    .sort() // artImg, artImg1, artImg2 순서 보장
+    .map(key => selectedProject[key]);
 
-    const images = Object.keys(current)
-        .filter(key => key.startsWith("artImg") && current[key])
-        .map(key => current[key]);
+    if (!currentProject) return <div>데이터가 없습니다.</div>;
 
     return (
-        <section className="art-project" style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", gap: "1vw" }}>
-            <h2 style={{ fontFamily: "var(--suit)", fontSize: "30px", fontWeight: "500" }}>{current.title}</h2>
-            <div className="img-wrap" style={{
-                display: "flex",
-                justifyContent: "space-around",
-                width: "100%",
-                height: "80%",
-            }}>
-                {images.map((src, i) => (
-                    <img
-                        key={i}
-                        src={src}
-                        alt={`${current.alt} - ${i + 1}`}
-                        style={{ maxHeight: "100%" }}
-                    />
-                ))}
+        <section className="art-project">
+            <h2>{currentProject.title}</h2>
+            <div className="mid_i">
+                <div className="img-wrap">
+                    {images.length > 0 ? (
+                        images.map((src, i) => (
+                            <img
+                                key={i}
+                                src={src}
+                                alt={`${currentProject.alt} - ${i + 1}`}
+                            />
+                        ))
+                    ) : (
+                        <p>이미지가 없습니다.</p>
+                    )}
+                </div>
+                <div className="txt_i">
+                    {currentProject.medium && (
+                        <p><strong>Medium:</strong> {currentProject.medium}</p>
+                    )}
+                    {currentProject.description && (
+                        <p><strong>Description:</strong> {currentProject.description}</p>
+                    )}
+                </div>
             </div>
-            <p><strong>Medium:</strong> {current.medium}</p>
-            <p><strong>Description:</strong> {current.description}</p>
-            <div className="buttons" style={{ display: "flex", alignSelf: "center", gap: "5vw" }}>
+            <div className="buttons">
                 <button onClick={handlePrev}>이전</button>
                 <button onClick={handleNext}>다음</button>
             </div>

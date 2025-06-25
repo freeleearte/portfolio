@@ -31,8 +31,18 @@ import marketImg from "../asset/market.jpg";
 import la1Img from "../asset/la1.jpg";
 import la2Img from "../asset/la2.jpg";
 import mutatedImg from "../asset/mutated.png";
+import waveImg from "../asset/wave.png";
+import collagesImg from "../asset/collages.png";
+import typo1Img from "../asset/typo1.jpg";
+import typo2Img from "../asset/typo2.jpg";
+import typo3Img from "../asset/typo3.jpg";
+import typo4Img from "../asset/typo4.jpg";
+import typo5Img from "../asset/typo5.jpg";
+import challengeImg from "../asset/challenge.jpg";
+import selfImg from "../asset/self.jpg";
 import venus1Img from "../asset/venus1.jpg";
 import venus2Img from "../asset/venus2.jpg";
+import worldImg from "../asset/world.jpg";
 
 export const projects = [
     {
@@ -174,6 +184,7 @@ export const projects = [
     {
         title: "Wave Rave",
         image: wavemockImg,
+        artImg: waveImg,
         alt: "Wave Rave",
         tags: ["Acrylic", "Resin", "Found Objects", "3D", "Stage"],
         visitLink: "#",
@@ -182,6 +193,7 @@ export const projects = [
     {
         title: "Self Portrait Collages",
         image: collagesmockImg,
+        artImg: collagesImg,
         alt: "Self Portrait Collages",
         tags: ["Collage", "Exprience", "Life", "Disorientations", "Alternatives"],
         visitLink: "#",
@@ -190,6 +202,11 @@ export const projects = [
     {
         title: "Typographic Experiment",
         image: typographicmockImg,
+        artImg: typo1Img,
+        artImg1: typo2Img,
+        artImg2: typo3Img,
+        artImg3: typo4Img,
+        artImg4: typo5Img,
         alt: "Typographic Experiment",
         tags: ["Typographic", "Acrylic", "Digital", "Kay Rosen", "Barbara Kruger"],
         visitLink: "#",
@@ -198,6 +215,7 @@ export const projects = [
     {
         title: "Challenge",
         image: challengemockImg,
+        artImg: challengeImg,
         alt: "Challenge",
         tags: ["Cutout Images", "Spray Paint", "Gouache", "Sakura Pen", "Collage"],
         visitLink: "#",
@@ -206,6 +224,7 @@ export const projects = [
     {
         title: "Self-portrait",
         image: selfmockImg,
+        artImg: selfImg,
         alt: "Self-portrait",
         tags: ["Gouache", "Colored Pencil", "Portrait", "Face", "Emotional "],
         visitLink: "#",
@@ -225,6 +244,7 @@ export const projects = [
     {
         title: "I belong to the world",
         image: worldmockImg,
+        artImg: worldImg,
         alt: "I belong to the world",
         tags: ["Sakura Pen", "Cutouts", "Colored Pencil", "Watercolor", "World"],
         visitLink: "#",
