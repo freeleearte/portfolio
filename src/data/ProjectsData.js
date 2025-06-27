@@ -43,6 +43,13 @@ import selfImg from "../asset/self.jpg";
 import venus1Img from "../asset/venus1.jpg";
 import venus2Img from "../asset/venus2.jpg";
 import worldImg from "../asset/world.jpg";
+import TSImg from "../asset/TimeandSpace.jpg";
+import TSMockImg from "../asset/TimeandSpaceMock.png";
+import Pick1Img from "../asset/PickPocket1.jpg";
+import Pick2Img from "../asset/PickPocket2.jpg";
+import PickMockImg from "../asset/PickPocketMock.png";
+import DizzyImg from "../asset/Dizzy.jpg";
+import DizzyMockImg from "../asset/DizzyMock.png";
 
 export const projects = [
     {
@@ -105,6 +112,40 @@ export const projects = [
         tags: ["Renewal", "HTML/CSS", "JavaScript", "Photoshop", "Responsive"],
         visitLink: "https://freeleearte.github.io/cosmetic/",
         type: "mock",
+    },
+    {
+        title: "Time and Space",
+        image: TSMockImg,
+        artImg: TSImg,
+        alt: "Time and Space",
+        description: "사람의 시선이 이동하는 방식과 의식의 흐름에서 흥미를 느껴 이 작업을 시작했습니다. 우리가 시간을 인식하고 공간을 바라보는 감각은 늘 주관적이고 유동적이라는 점에 주목했습니다. 작품은 이러한 흐름을 시각적으로 풀어내며, 복잡한 감정과 내면의 움직임까지 담아내고자 했습니다.",
+        medium: "Acrylic, Resin, Gouache",
+        tags: ["Painting", "Acrylic", "Resin", "Poster", "Gouache"],
+        visitLink: "#",
+        type: "art",
+    },
+    {
+        title: "PickPocket",
+        image: PickMockImg,
+        artImg: Pick1Img,
+        artImg1: Pick2Img,
+        alt: "PickPocket",
+        description: "헝가리, 오스트리아, 체코의 인상적인 풍경을 사진으로 담아 콜라주 포스터로 만들었습니다. 아름다운 순간들을 보석처럼 훔쳐오고 싶다는 마음에서 출발해, 동유럽의 ‘소매치기’ 이미지를 유쾌하게 녹여냈습니다. 낯선 도시에서 몰래 가져온 감정과 기억을 담은 작품입니다.",
+        medium: "Collage, Photoshop",
+        tags: ["Photoshop", "Collage", "Photography", "Poster", "Graphic Design"],
+        visitLink: "#",
+        type: "art",
+    },
+    {
+        title: "Dizzy Poster",
+        image: DizzyMockImg,
+        artImg: DizzyImg,
+        alt: "Dizzy Poster",
+        description: "다트와 바를 결합한 공간을 위해 의뢰받아 제작한 포스터입니다. 직접 공간에서 촬영한 사진들을 활용해, 어지럽고도 즐거운 분위기를 시각화했습니다. 아지트 같은 친근한 느낌을 주기 위해 조명, 구도, 질감을 세심하게 조합했으며, Dizzy라는 제목처럼 약간 취한 듯한 감각을 담아냈습니다.",
+        medium: "Collage, Photoshop",
+        tags: ["Photoshop", "Collage", "Photography", "Poster", "Graphic Design"],
+        visitLink: "#",
+        type: "art",
     },
     {
         title: "Don’t fxxk my vibe",
