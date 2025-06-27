@@ -3,8 +3,6 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import "./Tab_menu.css";
 import tabTop from '../asset/tab_top.png';
 import right from '../asset/right.png';
-import arrow2 from '../asset/arrow2.png';
-import arrow1 from '../asset/arrow_main.png';
 
 const Tab_menu = ({ fadeOut }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,7 +41,7 @@ const Tab_menu = ({ fadeOut }) => {
 
   const startMainAnimation = (targetPath) => {
     if (isFlippedRef.current) return;
-    
+
     if (menuRef.current) menuRef.current.style.left = '-100%';
 
     document.querySelector('.box1')?.classList.add('rotate-shrink-expand');
@@ -100,7 +98,6 @@ const Tab_menu = ({ fadeOut }) => {
   }
 
   const isHome = location.pathname === '/';
-  const arrowImage = isHome ? arrow1 : arrow2;
 
   return (
     <div>
@@ -127,7 +124,8 @@ const Tab_menu = ({ fadeOut }) => {
             </div>
             <img alt="info" src={right} />
           </div>
-          <img alt="arrow" src={arrowImage} />
+          <div className="area_s" />
+          <div className="area_s_bg" />
         </div>
       </div>
     </div>

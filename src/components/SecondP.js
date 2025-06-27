@@ -11,6 +11,10 @@ import htmlImg from "../asset/html.png";
 import illustImg from "../asset/illust.png";
 import jsImg from "../asset/js.png";
 import psImg from "../asset/ps.png";
+import githubImg from "../asset/github.png";
+import gitImg from "../asset/git.png";
+import tsImg from "../asset/ts.png";
+import reactImg from "../asset/react.png";
 
 const SecondP = () => {
     useEffect(() => {
@@ -68,6 +72,26 @@ const SecondP = () => {
                 id: 9,
                 shape: 'image',
                 image: psImg,
+            },
+            {
+                id: 10,
+                shape: 'image',
+                image: githubImg,
+            },
+            {
+                id: 11,
+                shape: 'image',
+                image: gitImg,
+            },
+            {
+                id: 12,
+                shape: 'image',
+                image: tsImg,
+            },
+            {
+                id: 13,
+                shape: 'image',
+                image: reactImg,
             },
         ]);
 
@@ -138,7 +162,7 @@ const SecondP = () => {
     return (
         <div className="second_p">
             <div className="top">
-                <p>디자인과 프론트엔드로 마음을 잇는 경험을 만듭니다.</p>
+                <p>디자인과 프론트엔드로 마음을 잇는 경험을 <br></br>만듭니다.</p>
                 <div id="bubbles_i"></div>
             </div>
             <div className="bot">

@@ -83,25 +83,22 @@ const ProjectsItem = ({ index, title, image, alt, tags, visitLink, reviewLink, t
                             padding: "20px",
                             borderRadius: "10px",
                             width: "80%",
-                            height: "80%",
+                            height: "85%",
                             position: "relative",
                         }}
                     >
-                        <button
+                        <i
+                            className="fa-solid fa-xmark"
                             onClick={closeModal}
                             style={{
                                 position: "absolute",
                                 top: "10px",
                                 right: "15px",
                                 cursor: "pointer",
-                                fontSize: "16px",
-                                border: "none",
-                                background: "transparent",
+                                fontSize: "30px",
                             }}
                             aria-label="Close modal"
-                        >
-                            ✕
-                        </button>
+                        ></i>
 
                         {/* 모달 안에 보여줄 내용 */}
                         <ProjectsModal selectedProject={selectedProject} />

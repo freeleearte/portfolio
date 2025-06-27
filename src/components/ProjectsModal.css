@@ -8,13 +8,14 @@
 
 .art-project h2 {
     font-family: var(--suit);
-    font-size: 30px;
+    font-size: 60px;
     font-weight: 500;
 }
 
 .mid_i {
     display: flex;
     width: 100%;
+    align-items: center;
 }
 
 .img-wrap {
@@ -37,10 +38,84 @@
 
 .txt_i {
     width: 30%;
+    font-family: var(--pretendard);
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    margin-top: 5vw;
+    font-weight: 300;
+    line-height: 1.2;
+    font-size: 1.5rem;
+    padding-left: 1vw;
+}
+
+.txt_i strong {
+    font-weight: 600;
 }
 
 .buttons {
     display: flex;
     align-self: center;
     gap: 5vw;
+    position: absolute;
+    bottom: 2vw;
+}
+
+.buttons i {
+    cursor: pointer;
+    font-size: 30px;
+    transition: .6s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .buttons i:hover {
+        color: #44f620;
+        transform: scale(1.5);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .art-project {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+
+    }
+
+    .art-project h2 {
+        font-size: 30px;
+    }
+
+    .mid_i {
+        flex-direction: column;
+    }
+
+    .img-wrap {
+        width: 100%;
+        height: 50vh;
+        padding-inline: 0;
+        align-items: center;
+    }
+
+    .img-wrap img {
+        max-width: 95%;
+        max-height: 100%;
+        width: fit-content;
+        margin-inline: auto;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    .txt_i {
+        width: 100%;
+        font-size: 1rem;
+        padding-left: 0;
+    }
+
+    .buttons {
+        width: 100%;
+        justify-content: space-around;
+    }
 }

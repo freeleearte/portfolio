@@ -13,10 +13,13 @@ const ProjectsModal = ({ filterType = "art", selectedProject }) => {
 
     // 필터가 바뀌거나 selectedProject가 변경되었을 때
     useEffect(() => {
-        if (!filteredProjects.includes(currentProject)) {
+        if (selectedProject) {
+            setCurrentProject(selectedProject);
+        } else {
             setCurrentProject(filteredProjects[0]);
         }
-    }, [filterType]);
+    }, [selectedProject, filterType]);
+
 
     const currentIndex = filteredProjects.findIndex(
         (p) => p.title === currentProject?.title
@@ -37,10 +40,10 @@ const ProjectsModal = ({ filterType = "art", selectedProject }) => {
         setCurrentProject(prev);
     };
 
-    const images = Object.keys(selectedProject)
-    .filter(key => key.startsWith("artImg") && selectedProject[key])
-    .sort() // artImg, artImg1, artImg2 순서 보장
-    .map(key => selectedProject[key]);
+    const images = Object.keys(currentProject)
+        .filter(key => key.startsWith("artImg") && currentProject[key])
+        .sort()
+        .map(key => currentProject[key]);
 
     if (!currentProject) return <div>데이터가 없습니다.</div>;
 
@@ -55,6 +58,7 @@ const ProjectsModal = ({ filterType = "art", selectedProject }) => {
                                 key={i}
                                 src={src}
                                 alt={`${currentProject.alt} - ${i + 1}`}
+                                onContextMenu={(e) => e.preventDefault()}
                             />
                         ))
                     ) : (
@@ -71,8 +75,8 @@ const ProjectsModal = ({ filterType = "art", selectedProject }) => {
                 </div>
             </div>
             <div className="buttons">
-                <button onClick={handlePrev}>이전</button>
-                <button onClick={handleNext}>다음</button>
+                <i class="fa-solid fa-left-long" onClick={handlePrev}></i>
+                <i class="fa-solid fa-right-long" onClick={handleNext}></i>
             </div>
         </section>
     );

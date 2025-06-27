@@ -28,6 +28,10 @@
     margin-top: 100px;
 }
 
+.second_p .top p br {
+    display: none;
+}
+
 .bubbles {
     position: absolute;
     z-index: -1;
@@ -67,7 +71,12 @@
         margin-top: 100px;
     }
 
+    .second_p .top p br {
+        display: block;
+    }
+
     #bubbles_i {
         top: 20%;
+        pointer-events: none;
     }
 }

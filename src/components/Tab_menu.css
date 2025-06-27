@@ -29,9 +29,10 @@
     transform: translateX(-50%);
     top: 0;
     z-index: 999;
-    background: #58175C40;
+    /* background: #58175C40; */
     color: #fff;
     display: none;
+    pointer-events: none;
 }
 
 .tab_menu {
@@ -42,6 +43,7 @@
     flex-direction: column;
     align-items: flex-end;
     transition: left .6s ease-in-out;
+    pointer-events: auto;
 }
 
 .tab_menu_wrap img {
@@ -108,7 +110,7 @@
 .right.r_main {
     position: absolute;
     top: 350px;
-    right: 6vw;
+    right: 3vw;
     display: flex;
     align-items: center;
 }
@@ -151,6 +153,28 @@
     opacity: 0;
     transition: opacity 0.5s ease;
     pointer-events: none;
+}
+
+.area_s {
+    position: fixed;
+    bottom: 50%;
+    transform: translateY(50%);
+    right: 0;
+    width: 16.5vw;
+    height: 98vh;
+    border: 1vw dotted #8B1894;
+    background: transparent;
+    pointer-events: none;
+}
+
+.area_s_bg {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 82vw;
+    height: 100vh;
+    background: #58175C40;
+    z-index: -1;
 }
 
 @media screen and (max-width: 1850px) {
